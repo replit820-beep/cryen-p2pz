@@ -13,12 +13,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script type="module">
 const FIREBASE_CONFIG = {
-  apiKey:"YOUR_API_KEY",
-  authDomain:"YOUR_PROJECT.firebaseapp.com",
-  projectId:"YOUR_PROJECT_ID",
-  storageBucket:"YOUR_PROJECT.appspot.com",
-  messagingSenderId:"YOUR_SENDER_ID",
-  appId:"YOUR_APP_ID"
+  apiKey:"AIzaSyAQkRUL-mVY77VOxxkBHqoTDfMKqecoPZE",
+  authDomain:"cryzenp2p.firebaseapp.com",
+  projectId:"cryzenp2p",
+  storageBucket:"cryzenp2p.firebasestorage.app",
+  messagingSenderId:"G-HV250DYVCV",
+  appId:"1:421885612257:web:0594fe4eb4593d443e67a0"
 };
 const BOT_TOKEN     = "8730807306:AAEAEmoR57B9_TIF3PVhN-59l-jRQH0Ls5c";
 const ADMIN_CHAT_ID = "615774366";
@@ -33,7 +33,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup,
 import { getFirestore, doc, getDoc, setDoc, onSnapshot, serverTimestamp }
        from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-let app, auth, db, fbReady = false;
+let app, auth, db, fbReady = TRUE;
 try { app=initializeApp(FIREBASE_CONFIG); auth=getAuth(app); db=getFirestore(app); fbReady=true; }
 catch(e){ console.warn("Firebase not configured — demo mode"); }
 
