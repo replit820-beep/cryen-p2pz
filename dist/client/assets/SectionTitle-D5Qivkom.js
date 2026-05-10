@@ -1,0 +1,1 @@
+import{j as e}from"./index-CsDruC8C.js";function l({title:s,action:t}){return e.jsxs("div",{className:"flex items-center justify-between mb-3",children:[e.jsxs("div",{className:"flex items-center gap-2",children:[e.jsx("span",{className:"block w-1 h-5 rounded-full bg-grad-primary glow"}),e.jsx("h2",{className:"font-bold text-base",children:s})]}),t]})}export{l as S};
