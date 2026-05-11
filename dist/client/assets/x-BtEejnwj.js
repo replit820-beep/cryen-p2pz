@@ -1,1 +1,0 @@
-import{c}from"./index-CsDruC8C.js";const o=[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["path",{d:"M12 6v6l4 2",key:"mmk7yg"}]],k=c("clock",o);const e=[["path",{d:"M18 6 6 18",key:"1bl5f8"}],["path",{d:"m6 6 12 12",key:"d8bk6v"}]],a=c("x",e);export{k as C,a as X};
