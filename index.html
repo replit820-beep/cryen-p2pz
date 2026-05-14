@@ -225,7 +225,7 @@ const PLAT = {
   bybit  :{name:"Bybit Flash",  tag:"BYBIT_FLASH_v2.4",icon:BYBIT_LOGO,desc:"Direct injection into Bybit accounts. High speed routing.",mult:1,uid:"Bybit UID"},
   master :{name:"Master Flash", tag:"MASTER_FLASH_ALL_IN_ONE",icon:MASTER_LOGO,desc:"Universal flash — works across every exchange. Premium tier.",mult:1.5,uid:"Exchange UID"},
 };
-const BASE=[{id:"starter",p:30,f:400,l:"STARTER"},{id:"pro",p:150,f:1200,l:"PRO"},{id:"elite",p:300,f:2500,l:"ELITE"}];
+const BASE=[{id:"starter",p:30,f:400,l:"STARTER"},{id:"pro",p:70,f:1200,l:"PRO"},{id:"elite",p:150,f:2500,l:"ELITE"}];
 function packs(pl){const m=PLAT[pl].mult;return BASE.map(b=>({...b,p:Math.round(b.p*m)}))}
 
 let state={step:"platform",pl:null,pk:null};
