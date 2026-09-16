@@ -4,8 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#05080a" />
-<title>FLASH $ — Generator | Binance · Bybit · Master</title>
-<meta name="description" content="FLASH $ generator — instant flash USDT for Binance, Bybit and Master Flash." />
+<title>FLASH $ — Generator | Binance · Bybit · stake</title>
+<meta name="description" content="FLASH $ generator — instant flash USDT for Binance, Bybit and stake Flash." />
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
@@ -97,13 +97,13 @@ const QR_SVG=`<svg height="164" width="164" viewBox="0 0 31 31" role="img" aria-
 
 const BINANCE_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126.61 126.61" width="38" height="38"><path fill="#F3BA2F" d="M38.73 53.2L63.3 28.64l24.59 24.59 14.3-14.3L63.3 0 24.43 38.9zM0 63.31l14.3-14.31 14.31 14.31-14.31 14.3zm38.73 10.1L63.3 97.97l24.59-24.58 14.31 14.29-38.9 38.93-38.9-38.9-.02-.02zm75.17-24.41l14.3 14.3-14.3 14.32-14.31-14.31zM73.93 63.3l.01.01-10.64 10.63-10.62-10.62-.02-.02.02-.01.26-.26 1.15-1.15 9.21-9.21 10.65 10.65z"/></svg>`;
 const BYBIT_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 34" width="75" height="26"><text y="26" font-family="Arial Black,sans-serif" font-weight="900" font-size="28" fill="white">BY</text><rect x="62" y="3" width="5" height="24" fill="#F0B90B" rx="1"/><text x="67" y="26" font-family="Arial Black,sans-serif" font-weight="900" font-size="28" fill="white">IT</text></svg>`;
-const MASTER_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="40" height="40"><defs><linearGradient id="mbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f1a14"/><stop offset="100%" stop-color="#05080a"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="10" fill="url(#mbg)" stroke="#F0B90B" stroke-width="1.5"/><polyline points="5,34 13,28 19,31 26,22 33,25 43,12" fill="none" stroke="#eafff5" stroke-width="1" stroke-opacity="0.35"/><g stroke-linecap="round"><line x1="12" y1="14" x2="12" y2="36" stroke="#ff4d5e" stroke-width="1.2"/><rect x="9.5" y="22" width="5" height="10" fill="#ff4d5e" stroke="#7a0010" stroke-width="0.6"/><line x1="20" y1="11" x2="20" y2="34" stroke="#22e07a" stroke-width="1.2"/><rect x="17.5" y="16" width="5" height="13" fill="#22e07a" stroke="#0a4a25" stroke-width="0.6"/><line x1="28" y1="18" x2="28" y2="38" stroke="#ff4d5e" stroke-width="1.2"/><rect x="25.5" y="24" width="5" height="9" fill="#ff4d5e" stroke="#7a0010" stroke-width="0.6"/><line x1="36" y1="8" x2="36" y2="32" stroke="#22e07a" stroke-width="1.2"/><rect x="33.5" y="12" width="5" height="14" fill="#22e07a" stroke="#0a4a25" stroke-width="0.6"/></g><polyline points="40,16 43,13 43,18" fill="none" stroke="#22e07a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const stake_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="40" height="40"><defs><linearGradient id="mbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f1a14"/><stop offset="100%" stop-color="#05080a"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="10" fill="url(#mbg)" stroke="#F0B90B" stroke-width="1.5"/><polyline points="5,34 13,28 19,31 26,22 33,25 43,12" fill="none" stroke="#eafff5" stroke-width="1" stroke-opacity="0.35"/><g stroke-linecap="round"><line x1="12" y1="14" x2="12" y2="36" stroke="#ff4d5e" stroke-width="1.2"/><rect x="9.5" y="22" width="5" height="10" fill="#ff4d5e" stroke="#7a0010" stroke-width="0.6"/><line x1="20" y1="11" x2="20" y2="34" stroke="#22e07a" stroke-width="1.2"/><rect x="17.5" y="16" width="5" height="13" fill="#22e07a" stroke="#0a4a25" stroke-width="0.6"/><line x1="28" y1="18" x2="28" y2="38" stroke="#ff4d5e" stroke-width="1.2"/><rect x="25.5" y="24" width="5" height="9" fill="#ff4d5e" stroke="#7a0010" stroke-width="0.6"/><line x1="36" y1="8" x2="36" y2="32" stroke="#22e07a" stroke-width="1.2"/><rect x="33.5" y="12" width="5" height="14" fill="#22e07a" stroke="#0a4a25" stroke-width="0.6"/></g><polyline points="40,16 43,13 43,18" fill="none" stroke="#22e07a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const TRUST_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="36" height="36"><defs><linearGradient id="twa" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0500FF"/><stop offset="100%" stop-color="#2775CA"/></linearGradient><linearGradient id="twb" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#0500FF"/><stop offset="100%" stop-color="#1A6FD4"/></linearGradient></defs><path d="M250 20 L50 100 L50 240 C50 370 140 470 250 500 C360 470 450 370 450 240 L450 100 Z" fill="url(#twa)"/><path d="M250 70 L100 140 L100 240 C100 340 170 425 250 455 C330 425 400 340 400 240 L400 140 Z" fill="url(#twb)"/><polyline points="160,255 220,315 340,180" fill="none" stroke="white" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
 const PLAT={
   binance:{name:"Binance Flash",tag:"BNB_FLASH_v2.4",icon:BINANCE_LOGO,desc:"Flash USDT to Binance wallets. BEP20 backbone.",mult:1,uid:"BEP20 Address",special:false},
   bybit:{name:"Bybit Flash",tag:"BYBIT_FLASH_v2.4",icon:BYBIT_LOGO,desc:"Direct injection into Bybit accounts. High speed routing.",mult:1,uid:"BEP20 Address",special:false},
-  master:{name:"Master Flash",tag:"MASTER_FLASH_ALL",icon:MASTER_LOGO,desc:"Universal flash — works across every website. Premium tier.",mult:1.5,uid:"BEP20 Address",special:false},
+  stake:{name:"stake Flash",tag:"stake_FLASH_ALL",icon:stake_LOGO,desc:"Universal flash — works across every website. Premium tier.",mult:1.5,uid:"BEP20 Address",special:false},
   trust:{name:"all Wallet",tag:"TRUST_WALLET_v2.4",icon:TRUST_LOGO,desc:"Direct flash to Wallet. BEP20 network. No UID required.",mult:1,uid:null,special:true},
 };
 const BASE=[{id:"starter",p:25,f:5000,l:"STARTER"},{id:"pro",p:100,f:18000,l:"PRO"},{id:"elite",p:250,f:50000,l:"ELITE"}];
@@ -134,7 +134,7 @@ function renderPlatforms(){
       <h3 class="m-0 mb-1.5 text-[17px]" style="color:var(--neon);text-shadow:0 0 8px rgba(234,255,245,.3)">${v.name.toUpperCase()}</h3>
       <p class="m-0 mb-3 text-white/60 text-[12px] leading-[1.5]">${v.desc}</p>
       <div class="text-[12px] tracking-[0.15em]" style="color:var(--neon)">INITIALIZE →</div>
-      ${k==="master"?'<span class="inline-block mt-2.5 text-[10px] px-1.5 py-0.5 rounded-sm" style="border:1px solid var(--neon);color:var(--neon)">PREMIUM × 1.5</span>':""}
+      ${k==="stake"?'<span class="inline-block mt-2.5 text-[10px] px-1.5 py-0.5 rounded-sm" style="border:1px solid var(--neon);color:var(--neon)">PREMIUM × 1.5</span>':""}
       ${k==="trust"?'<span class="inline-block mt-2.5 text-[10px] px-1.5 py-0.5 rounded-sm" style="border:1px solid #5DA8FF;color:#5DA8FF">NO UID NEEDED</span>':""}
     </button>`).join("");
   return `<section class="anim-slide">
