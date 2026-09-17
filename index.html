@@ -178,7 +178,7 @@ function renderPayment(){
   const inputs=`
     <p class="text-[11px] tracking-[0.25em] text-left mb-1.5" style="color:var(--neon-dim)">&gt; CONFIRM_PAYMENT</p>
     <label class="block mb-3.5">
-      <span class="text-[11px] text-white/50 tracking-[0.15em] block mb-1">Bep20 adress</span>
+      <span class="text-[11px] text-white/50 tracking-[0.15em] block mb-1">transaction hash</span>
       <input id="txHash" value="${state.txHash}" ${state.paid?"":"disabled"} placeholder="0x..." class="glass-input w-full rounded p-2.5 text-[13px] disabled:opacity-50"/>
     </label>
     ${!isTrust?`<label class="block mb-3.5"><span class="text-[11px] text-white/50 tracking-[0.15em] block mb-1">${(m.uid||"").toUpperCase()}</span><input id="exId" value="${state.exId}" ${state.paid?"":"disabled"} placeholder="Your BEP20 wallet address" class="glass-input w-full rounded p-2.5 text-[13px] disabled:opacity-50"/></label>`:""}
