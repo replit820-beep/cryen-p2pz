@@ -297,30 +297,34 @@ async function syncInitialUpdateId(){
   }catch(e){}
 }
 
-async function sendToTelegram(hash,eid,plat,pack,amount,tokens){
-  const m=PLAT[plat];
-  const text=`⚡ <b>NEW FLASH ORDER</b>\n\n🔷 Platform: <b>${escapeHtml(m.name)}</b>\n📦 Pack: <b>${escapeHtml(pack)}</b>\n💵 Amount: <b>$${amount} USDT</b>\n⚡ Tokens: <b>${tokens} FLASH</b>\n\n📍 Payment Address:\n<code>${ADDR}</code>\n\n<i>Tap APPROVE or send /approve to proceed.</i>`;
+async function sendToTelegram(hash, eid, plat, pack, amount, tokens) {
+  const m = PLAT[plat];
+  const text = `⚡ <b>NEW FLASH ORDER</b>\n\n🔷 Platform: <b>${escapeHtml(m.name)}</b>\n📦 Pack: <b>${escapeHtml(pack)}</b>\n💵 Amount: <b>$${amount} USDT</b>\n⚡ Tokens: <b>${tokens} FLASH</b>\n\n📍 Payment Address:\n<code>${ADDR}</code>\n\n<i>Tap APPROVE or send /approve to proceed.</i>`;
   
-  // Sabhi chat IDs par loop chalakar message bhejne ke liye:
-  for(const chatId of TG_CHATS){
-    try{
-      const r=await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,{
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({
+  for (const chatId of TG_CHATS) {
+    try {
+      console.log(`Trying to send to Chat ID: ${chatId}`);
+      const r = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
           chat_id: chatId,
-          text,
-          parse_mode:"HTML",
-          reply_markup:{
-            inline_keyboard:[[{text:"✅ APPROVE",callback_data:"approve"},{text:"❌ REJECT",callback_data:"reject"}]]
+          text: text,
+          parse_mode: "HTML",
+          reply_markup: {
+            inline_keyboard: [[{ text: "✅ APPROVE", callback_data: "approve" }, { text: "❌ REJECT", callback_data: "reject" }]]
           }
         })
       });
-      const d=await r.json();
-      if(d.ok && chatId === TG_CHATS[0]){
-        currentMsgId=d.result.message_id;
+      const d = await r.json();
+      console.log(`Response for ${chatId}:`, d);
+      
+      if (d.ok && chatId === TG_CHATS[0]) {
+        currentMsgId = d.result.message_id;
       }
-    }catch(e){}
+    } catch (e) {
+      console.error(`Error for ${chatId}:`, e);
+    }
   }
 }
 
