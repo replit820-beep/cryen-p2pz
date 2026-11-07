@@ -4,8 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#05080a" />
-<title>FLASH $ — Generator | Binance · Bybit · stake</title>
-<meta name="description" content="FLASH $ generator — instant flash USDT for Binance, Bybit and stake Flash." />
+<title>CRYZEN — Flash Protocol & Private Card Vault</title>
+<meta name="description" content="CRYZEN — Instant Flash USDT Protocol & Private Metal Card Vault." />
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
@@ -17,7 +17,8 @@
 }
 :root{
   --neon:#eafff5; --neon-dim:rgba(234,255,245,.55);
-  --danger:#ff8a8a; --muted-c:#9aa8a3; --fg-c:#eaf3ee;
+  --gold:#f3d299; --gold-dim:rgba(243,210,153,.55);
+  --danger:#ff6b6b; --muted-c:#9aa8a3; --fg-c:#eaf3ee;
   --border-c:rgba(255,255,255,.12); --card-c:rgba(255,255,255,.04);
 }
 html,body{overflow-x:hidden}
@@ -26,10 +27,6 @@ body{
   font-family:"Helvetica Regular",ui-sans-serif,system-ui,sans-serif;
   -webkit-tap-highlight-color:transparent;-webkit-overflow-scrolling:touch;
 }
-.liquid-glass{background:rgba(255,255,255,.01);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);box-shadow:inset 0 1px 1px rgba(255,255,255,.1);position:relative;overflow:hidden}
-.liquid-glass::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1.4px;
-  background:linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,.15) 20%,rgba(255,255,255,0) 40%,rgba(255,255,255,0) 60%,rgba(255,255,255,.15) 80%,rgba(255,255,255,.45));
-  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
 .glass-card{background:rgba(255,255,255,.03);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);box-shadow:inset 0 1px 1px rgba(255,255,255,.08),0 8px 30px rgba(0,0,0,.35);position:relative;overflow:hidden}
 .glass-card::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1.2px;
   background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,.15) 25%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 60%,rgba(255,255,255,.2) 85%,rgba(255,255,255,.55));
@@ -40,6 +37,90 @@ body{
 .glass-input:focus{border-color:rgba(255,255,255,.4)!important;outline:none;box-shadow:0 0 0 1px rgba(255,255,255,.18),inset 0 1px 1px rgba(255,255,255,.1)}
 .neon-btn{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.08));color:#fff;backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);border:1px solid rgba(255,255,255,.25);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -1px 0 rgba(255,255,255,.08),0 8px 28px rgba(255,255,255,.1);text-shadow:0 1px 0 rgba(0,0,0,.25);cursor:pointer}
 .neon-btn:hover{background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.12))}
+
+/* Hyper-Realistic Metal Credit Card Styling */
+.vault-shell {
+  background: rgba(14, 15, 20, 0.72);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 24px;
+  padding: 18px;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.12);
+}
+.vault-shell:hover {
+  transform: translateY(-6px);
+  border-color: rgba(243,210,153,0.35);
+  box-shadow: 0 28px 65px rgba(0,0,0,0.85), 0 0 35px rgba(243,210,153,0.12);
+}
+.real-credit-card {
+  position: relative;
+  aspect-ratio: 1.586 / 1;
+  width: 100%;
+  border-radius: 16px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 16px 35px rgba(0,0,0,0.75), inset 0 1px 1px rgba(255,255,255,0.32), inset 0 -1px 1px rgba(0,0,0,0.6);
+  transition: transform 0.35s ease;
+}
+.real-credit-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(115deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 3px),
+    radial-gradient(circle at 88% 12%, rgba(255,255,255,0.18), transparent 48%),
+    linear-gradient(125deg, rgba(255,255,255,0.1) 0%, transparent 40%, rgba(0,0,0,0.35) 100%);
+  pointer-events: none;
+}
+.vault-shell:hover .real-credit-card {
+  transform: scale(1.015);
+}
+.skin-carbon {
+  background: linear-gradient(135deg, #232730 0%, #101217 55%, #181b22 100%);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+.skin-titanium {
+  background: linear-gradient(135deg, #2d3846 0%, #131922 52%, #1d2631 100%);
+  border: 1px solid rgba(165,205,255,0.32);
+}
+.skin-gold {
+  background: linear-gradient(135deg, #42331b 0%, #191309 52%, #2e2210 100%);
+  border: 1px solid rgba(243,210,153,0.5);
+}
+.skin-obsidian {
+  background: linear-gradient(135deg, #241d38 0%, #0d0a14 52%, #1b152b 100%);
+  border: 1px solid rgba(210,180,255,0.42);
+}
+.emboss-num {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.92);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 -1px 0 rgba(255,255,255,0.25);
+}
+.gold-btn {
+  background: linear-gradient(180deg, #f5d9a6 0%, #c89e57 100%);
+  color: #140f06;
+  font-weight: 800;
+  border: 1px solid rgba(255,240,210,0.65);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.75), 0 8px 24px rgba(212,168,89,0.28);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.gold-btn:hover {
+  filter: brightness(1.07);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), 0 10px 32px rgba(243,210,153,0.42);
+}
+.tg-quote {
+  border-left: 3px solid var(--gold);
+  background: rgba(243, 210, 153, 0.05);
+  border-radius: 6px 12px 12px 6px;
+  padding: 12px 15px;
+}
+
 @keyframes blink{50%{opacity:0}} .cursor-blink{animation:blink 1s infinite}
 @keyframes slide-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .anim-slide{animation:slide-up .35s ease-out}
@@ -48,13 +129,6 @@ body{
 .pop{animation:pop .45s cubic-bezier(.2,.7,.2,1) both}
 .card-hover{transition:transform .25s ease}
 .card-hover:hover{transform:translateY(-4px)}
-@media(max-width:768px){
-  .liquid-glass{backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
-  .glass-card{backdrop-filter:blur(8px) saturate(120%);-webkit-backdrop-filter:blur(8px) saturate(120%);box-shadow:inset 0 1px 1px rgba(255,255,255,.06),0 4px 14px rgba(0,0,0,.3)}
-  .glass-soft{backdrop-filter:blur(8px) saturate(120%);-webkit-backdrop-filter:blur(8px) saturate(120%)}
-  .glass-input{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
-  .neon-btn{backdrop-filter:blur(8px) saturate(130%);-webkit-backdrop-filter:blur(8px) saturate(130%)}
-}
 ::selection{background:rgba(255,255,255,.2);color:#fff}
 .term{height:280px;overflow-y:auto;background:rgba(0,0,0,.4)}
 .term p{margin:0}
@@ -62,31 +136,40 @@ body{
 </head>
 <body>
 <video autoplay loop muted playsinline class="fixed inset-0 w-full h-full object-cover" style="z-index:0" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_114316_1c7889ad-2885-410e-b493-98119fee0ddb.mp4"></video>
-<div class="fixed inset-0" style="background:rgba(0,0,0,.55);z-index:1"></div>
+<div id="bg-tint" class="fixed inset-0 transition-colors duration-700" style="background:rgba(0,0,0,.58);z-index:1"></div>
 
 <div class="relative w-full max-w-7xl mx-auto flex flex-col min-h-screen px-4 md:px-6" style="z-index:10">
-  <header class="flex justify-between items-center py-4 border-b border-white/10">
+  <header class="flex flex-wrap justify-between items-center gap-3 py-4 border-b border-white/10">
     <div class="flex items-center gap-2.5">
-      <div class="w-9 h-9 rounded-md grid place-items-center" style="border:1px solid var(--neon);background:var(--card-c);box-shadow:0 0 16px rgba(234,255,245,.25)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--neon)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      <div id="brand-box" class="w-9 h-9 rounded-md grid place-items-center transition-all" style="border:1px solid var(--neon);background:var(--card-c);box-shadow:0 0 16px rgba(234,255,245,.25)">
+        <svg id="brand-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--neon)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
       </div>
       <div>
-        <h1 class="m-0 text-[16px] tracking-[0.25em]" style="color:var(--neon);text-shadow:0 0 8px rgba(234,255,245,.6)">FLASH $</h1>
-        <small class="block text-[10px] -mt-0.5" style="color:var(--muted-c)">v2.4 // mainnet</small>
+        <h1 id="brand-title" class="m-0 text-[16px] tracking-[0.25em] font-bold" style="color:var(--neon);text-shadow:0 0 8px rgba(234,255,245,.6)">CRYZEN // FLASH</h1>
+        <small id="brand-sub" class="block text-[10px] -mt-0.5" style="color:var(--muted-c)">v2.4 // mainnet</small>
       </div>
     </div>
-    <div class="text-[11px]" style="color:var(--muted-c)">
-      <span class="inline-block w-2 h-2 rounded-full neon-pulse mr-1.5" style="background:var(--neon);box-shadow:0 0 10px var(--neon)"></span>NODE_ONLINE
+
+    <!-- Mode Switcher -->
+    <div class="flex items-center gap-1.5 p-1 rounded-xl" style="background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(16px)">
+      <button id="tab-flash" class="px-3.5 py-1.5 rounded-lg text-[11px] font-bold tracking-[0.14em] transition-all cursor-pointer">⚡ FLASH USDT</button>
+      <button id="tab-cards" class="px-3.5 py-1.5 rounded-lg text-[11px] font-bold tracking-[0.14em] transition-all cursor-pointer">💳 CRYZEN CARDS</button>
+    </div>
+
+    <div class="text-[11px] hidden sm:flex items-center" style="color:var(--muted-c)">
+      <span id="status-dot" class="inline-block w-2 h-2 rounded-full neon-pulse mr-1.5" style="background:var(--neon);box-shadow:0 0 10px var(--neon)"></span>
+      <span id="status-txt">NODE_ONLINE</span>
     </div>
   </header>
 
-  <main class="max-w-[980px] w-full mx-auto py-6 px-2 flex-1">
+  <main class="max-w-[1040px] w-full mx-auto py-6 px-2 flex-1">
     <div id="steps" class="flex justify-center gap-2 flex-wrap mb-6 text-[11px]"></div>
     <div id="view"></div>
   </main>
 </div>
 
 <div id="modal"></div>
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none transition-all duration-300 opacity-0 translate-y-2"></div>
 
 <script>
 const ADDR="0x91Cc7f72821FFFb6f205e95AC7cf572Fe3Bab92a";
@@ -99,6 +182,10 @@ const BYBIT_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 34" w
 const stake_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 44" width="80" height="36"><rect width="100" height="44" rx="10" fill="#1a2332"/><text x="50" y="31" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-weight="700" font-size="26" fill="#ffffff" letter-spacing="1">Stake</text></svg>`;
 const TRUST_LOGO=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="36" height="36"><defs><linearGradient id="twa" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0500FF"/><stop offset="100%" stop-color="#2775CA"/></linearGradient><linearGradient id="twb" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#0500FF"/><stop offset="100%" stop-color="#1A6FD4"/></linearGradient></defs><path d="M250 20 L50 100 L50 240 C50 370 140 470 250 500 C360 470 450 370 450 240 L450 100 Z" fill="url(#twa)"/><path d="M250 70 L100 140 L100 240 C100 340 170 425 250 455 C330 425 400 340 400 240 L400 140 Z" fill="url(#twb)"/><polyline points="160,255 220,315 340,180" fill="none" stroke="white" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
+const CHIP_SVG=`<svg width="44" height="34" viewBox="0 0 46 34" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="45" height="33" rx="6.5" fill="url(#chipG)" stroke="#6E501B"/><path d="M1 12H15M31 12H45M1 22H15M31 22H45M15 1V33M31 1V33M15 17H31" stroke="#533B10" stroke-opacity="0.55" stroke-width="1.2"/><rect x="18" y="9" width="10" height="16" rx="2" stroke="#533B10" stroke-opacity="0.45" stroke-width="1"/><defs><linearGradient id="chipG" x1="0" y1="0" x2="46" y2="34" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF0C4"/><stop offset="0.45" stop-color="#D7AB5E"/><stop offset="1" stop-color="#9A6D24"/></linearGradient></defs></svg>`;
+const NFC_SVG=`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" style="opacity:0.65"><path d="M6 8.5a6.5 6.5 0 0 1 0 7"/><path d="M9.5 6a10 10 0 0 1 0 12"/><path d="M13 3.5a13.5 13.5 0 0 1 0 17"/></svg>`;
+const RINGS_SVG=`<svg width="44" height="28" viewBox="0 0 44 28" fill="none"><circle cx="15" cy="14" r="12" fill="#EB001B" fill-opacity="0.82"/><circle cx="29" cy="14" r="12" fill="#F79E1B" fill-opacity="0.82"/></svg>`;
+
 const PLAT={
   binance:{name:"Binance Flash",tag:"BNB_FLASH_v2.4",icon:BINANCE_LOGO,desc:"Flash USDT to Binance wallets. BEP20 backbone.",mult:1,uid:"BEP20 Address",special:false},
   bybit:{name:"Bybit Flash",tag:"BYBIT_FLASH_v2.4",icon:BYBIT_LOGO,desc:"Direct injection into Bybit accounts. High speed routing.",mult:1,uid:"BEP20 Address",special:false},
@@ -107,24 +194,234 @@ const PLAT={
 };
 const BASE=[{id:"starter",p:10,f:1000,l:"STARTER"},{id:"pro",p:25,f:3000,l:"PRO"},{id:"elite",p:50,f:13000,l:"ELITE"}];
 const TRUST_PACKS=[{id:"mega",p:30,f:50000,l:"MEGA"}];
+
+// Default CRYZEN Card Packs (None Sold Out Initially, Fully Bot-Editable)
+const DEFAULT_CARD_TIERS=[
+  {id:"t1",num:1,name:"Starter card pack",edition:"CRYZEN CARBON",skin:"skin-carbon",accent:"#cbd5e1",pan:"4532 •••• •••• 1094",p:5,credits:50,rate:"95%",soldOut:false,badge:"STARTER"},
+  {id:"t2",num:2,name:"Basic card pack",edition:"CRYZEN TITANIUM",skin:"skin-titanium",accent:"#93c5fd",pan:"4854 •••• •••• 4421",p:10,credits:120,rate:"97%",soldOut:false,badge:"INSTANT"},
+  {id:"t3",num:3,name:"Pro card pack",edition:"CRYZEN GOLD",skin:"skin-gold",accent:"#f3d299",pan:"5412 •••• •••• 8830",p:25,credits:350,rate:"99%",soldOut:false,badge:"MOST POPULAR"},
+  {id:"t4",num:4,name:"Elite card pack",edition:"CRYZEN OBSIDIAN",skin:"skin-obsidian",accent:"#d8b4fe",pan:"5580 •••• •••• 9901",p:50,credits:900,rate:"99.9%",soldOut:false,badge:"VIP LIMIT"}
+];
+
+let CARD_TIERS = JSON.parse(JSON.stringify(DEFAULT_CARD_TIERS));
+
+function loadLocalCardConfig(){
+  try{
+    const raw=localStorage.getItem("cryzen_card_cfg");
+    if(!raw)return;
+    const arr=JSON.parse(raw);
+    if(Array.isArray(arr)){
+      arr.forEach((item,idx)=>{
+        if(CARD_TIERS[idx]){
+          if(typeof item.p==="number")CARD_TIERS[idx].p=item.p;
+          if(typeof item.credits==="number")CARD_TIERS[idx].credits=item.credits;
+          if(typeof item.soldOut==="boolean")CARD_TIERS[idx].soldOut=item.soldOut;
+        }
+      });
+    }
+  }catch(e){}
+}
+function saveLocalCardConfig(){
+  try{
+    const compact=CARD_TIERS.map(c=>({p:c.p,credits:c.credits,soldOut:c.soldOut}));
+    localStorage.setItem("cryzen_card_cfg",JSON.stringify(compact));
+  }catch(e){}
+}
+loadLocalCardConfig();
+
+// Sync Config across all users via Telegram Group Description (CRYZEN_CFG:{...})
+async function syncConfigFromTelegramChat(){
+  try{
+    const r=await fetch(`https://api.telegram.org/bot${TG_TOKEN}/getChat?chat_id=${TG_CHAT}`);
+    const d=await r.json();
+    if(d.ok && d.result && typeof d.result.description==="string"){
+      const match=d.result.description.match(/CRYZEN_CFG:(\[.*?\])/);
+      if(match && match[1]){
+        const parsed=JSON.parse(match[1]);
+        if(Array.isArray(parsed)){
+          parsed.forEach((item,idx)=>{
+            if(CARD_TIERS[idx]){
+              if(typeof item.p==="number")CARD_TIERS[idx].p=item.p;
+              if(typeof item.credits==="number")CARD_TIERS[idx].credits=item.credits;
+              if(typeof item.soldOut==="boolean")CARD_TIERS[idx].soldOut=item.soldOut;
+            }
+          });
+          saveLocalCardConfig();
+          if(state.mode==="cards"&&state.step==="package")render();
+        }
+      }
+    }
+  }catch(e){}
+}
+
+async function pushConfigToTelegramChat(){
+  saveLocalCardConfig();
+  try{
+    const compact=CARD_TIERS.map(c=>({p:c.p,credits:c.credits,soldOut:c.soldOut}));
+    await fetch(`https://api.telegram.org/bot${TG_TOKEN}/setChatDescription`,{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({
+        chat_id:TG_CHAT,
+        description:`CRYZEN Live Store Config | CRYZEN_CFG:${JSON.stringify(compact)}`
+      })
+    });
+  }catch(e){}
+}
+
+async function sendAdminPanelToTelegram(notice=""){
+  const lines=CARD_TIERS.map(c=>`<b>#${c.num} ${escapeHtml(c.name)}</b>\nPrice: <b>$${c.p} USDT</b> · Value: <b>$${c.credits}</b> · Status: <b>${c.soldOut?"🔴 SOLD OUT":"🟢 IN STOCK"}</b>`).join("\n\n");
+  const text=`${notice?`✅ <b>${escapeHtml(notice)}</b>\n━━━━━━━━━━━━━━━━\n`:""}🎛 <b>CRYZEN CARD VAULT — BOT ADMIN PANEL</b>\n\n${lines}\n\n<b>Quick Bot Commands:</b>\n• <code>/set 1 5 50</code> (Set Pack #1 price $5 & value $50)\n• <code>/soldout 1</code> (Toggle Pack #1 Sold Out / In Stock)\n• <code>/resetcards</code> (Restore default prices & stock)\n• <code>/panel</code> (Open this live control menu)`;
+
+  const kb=CARD_TIERS.map(c=>([
+    {text:`${c.soldOut?"🟢 Make In-Stock":"🔴 Mark Sold Out"} (#${c.num} · $${c.p})`,callback_data:`adm_toggle:${c.num}`}
+  ]));
+
+  try{
+    await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({
+        chat_id:TG_CHAT,
+        text,
+        parse_mode:"HTML",
+        reply_markup:{inline_keyboard:kb}
+      })
+    });
+  }catch(e){}
+}
+
 const packsFor=pl=>PLAT[pl].special?TRUST_PACKS:BASE.map(b=>({...b,p:Math.round(b.p*PLAT[pl].mult)}));
 const fmt=s=>String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+const genShortId=()=>"CZ-"+Math.random().toString(36).substring(2,8).toUpperCase();
 
-const state={step:"platform",pl:null,pk:null,payLeft:180,procLeft:120,processing:false,paid:false,txHash:"",exId:"",logs:[],procFailed:false,procLabel:"VERIFYING_PAYMENT",procFoot:"Do not close this window. The node is scanning the chain.",copied:false};
-const timers={pay:null,proc:null,log:null,poll:null,succ:null};
+const state={
+  mode:"flash", // "flash" | "cards"
+  step:"platform",
+  pl:null,
+  pk:null,
+  cardTier:null,
+  orderShortId:"",
+  payLeft:180,
+  procLeft:120,
+  processing:false,
+  paid:false,
+  txHash:"",
+  exId:"",
+  logs:[],
+  procFailed:false,
+  procLabel:"VERIFYING_PAYMENT",
+  procFoot:"Do not close this window. The node is scanning the chain.",
+  copied:false
+};
+
+const timers={pay:null,proc:null,log:null,poll:null,succ:null,toast:null,bgAdmin:null};
 let currentMsgId=null;
 let lastUpdateId=0;
 let isPollingActive=false;
 let actionHandled=false;
 
-function stopAll(){Object.keys(timers).forEach(k=>{if(timers[k]){clearInterval(timers[k]);timers[k]=null}})}
-function resetAll(){stopAll();actionHandled=false;Object.assign(state,{step:"platform",pl:null,pk:null,processing:false,paid:false,txHash:"",exId:"",logs:[],procFailed:false,procLabel:"VERIFYING_PAYMENT",procFoot:"Do not close this window. The node is scanning the chain."});document.getElementById("modal").innerHTML="";render()}
+function showToast(msg,isSuccess=false){
+  const t=document.getElementById("toast");
+  if(!t)return;
+  const col=isSuccess?"#4ade80":"#ff8a8a";
+  const bdr=isSuccess?"rgba(74,222,128,.45)":"rgba(255,107,107,.45)";
+  t.innerHTML=`<div class="px-5 py-3 rounded-2xl text-[12px] font-bold tracking-wide flex items-center gap-2.5" style="background:rgba(12,12,16,.94);backdrop-filter:blur(16px);color:${col};border:1px solid ${bdr};box-shadow:0 14px 40px rgba(0,0,0,.75)"><span>${isSuccess?"✅":"⚠️"}</span> ${escapeHtml(msg)}</div>`;
+  t.classList.remove("opacity-0","translate-y-2");
+  t.classList.add("opacity-100","translate-y-0");
+  if(timers.toast)clearTimeout(timers.toast);
+  timers.toast=setTimeout(()=>{
+    t.classList.remove("opacity-100","translate-y-0");
+    t.classList.add("opacity-0","translate-y-2");
+  },2800);
+}
+
+function stopAll(){
+  ["pay","proc","log","poll","succ"].forEach(k=>{if(timers[k]){clearInterval(timers[k]);timers[k]=null}});
+}
+
+function switchMode(newMode){
+  stopAll();
+  actionHandled=false;
+  Object.assign(state,{
+    mode:newMode,
+    step:newMode==="cards"?"package":"platform",
+    pl:null,
+    pk:null,
+    cardTier:null,
+    processing:false,
+    paid:false,
+    txHash:"",
+    exId:"",
+    logs:[],
+    procFailed:false,
+    procLabel:"VERIFYING_PAYMENT",
+    procFoot:"Do not close this window. The node is scanning the chain."
+  });
+  document.getElementById("modal").innerHTML="";
+  render();
+}
+
+function resetAll(){
+  switchMode(state.mode);
+}
+
+function renderHeaderTheme(){
+  const isCard=state.mode==="cards";
+  const tf=document.getElementById("tab-flash");
+  const tc=document.getElementById("tab-cards");
+  const bBox=document.getElementById("brand-box");
+  const bSvg=document.getElementById("brand-svg");
+  const bTitle=document.getElementById("brand-title");
+  const bSub=document.getElementById("brand-sub");
+  const sDot=document.getElementById("status-dot");
+  const sTxt=document.getElementById("status-txt");
+  const bgTint=document.getElementById("bg-tint");
+
+  if(tf&&tc){
+    tf.style.cssText=state.mode==="flash"
+      ?"background:rgba(234,255,245,.14);border:1px solid rgba(234,255,245,.45);color:var(--neon);box-shadow:0 0 14px rgba(234,255,245,.2)"
+      :"background:transparent;border:1px solid transparent;color:rgba(255,255,255,.5)";
+    tc.style.cssText=state.mode==="cards"
+      ?"background:linear-gradient(135deg,rgba(243,210,153,.22),rgba(200,158,87,.08));border:1px solid rgba(243,210,153,.55);color:var(--gold);box-shadow:0 0 18px rgba(243,210,153,.22)"
+      :"background:transparent;border:1px solid transparent;color:rgba(255,255,255,.5)";
+    tf.onclick=()=>switchMode("flash");
+    tc.onclick=()=>switchMode("cards");
+  }
+
+  if(isCard){
+    bBox.style.cssText="border:1px solid var(--gold);background:rgba(243,210,153,.08);box-shadow:0 0 18px rgba(243,210,153,.25)";
+    bSvg.style.color="var(--gold)";
+    bTitle.textContent="CRYZEN // VAULT";
+    bTitle.style.cssText="color:var(--gold);text-shadow:0 0 10px rgba(243,210,153,.45)";
+    bSub.textContent="private card issuance";
+    sDot.style.cssText="background:var(--gold);box-shadow:0 0 10px var(--gold)";
+    sTxt.textContent="VAULT_SYNCED";
+    bgTint.style.background="rgba(6,6,11,.74)";
+  }else{
+    bBox.style.cssText="border:1px solid var(--neon);background:var(--card-c);box-shadow:0 0 16px rgba(234,255,245,.25)";
+    bSvg.style.color="var(--neon)";
+    bTitle.textContent="CRYZEN // FLASH";
+    bTitle.style.cssText="color:var(--neon);text-shadow:0 0 8px rgba(234,255,245,.6)";
+    bSub.textContent="v2.4 // mainnet";
+    sDot.style.cssText="background:var(--neon);box-shadow:0 0 10px var(--neon)";
+    sTxt.textContent="NODE_ONLINE";
+    bgTint.style.background="rgba(0,0,0,.55)";
+  }
+}
 
 function renderSteps(){
-  const order=["platform","package","payment"];const idx=order.indexOf(state.step);
+  const isCard=state.mode==="cards";
+  const order=isCard?["package","payment"]:["platform","package","payment"];
+  const idx=order.indexOf(state.step);
+  const accent=isCard?"var(--gold)":"var(--neon)";
+  const accentBg=isCard?"rgba(243,210,153,.1)":"rgba(234,255,245,.08)";
+  const accentBorder=isCard?"rgba(243,210,153,.45)":"rgba(234,255,245,.4)";
+
   document.getElementById("steps").innerHTML=order.map((s,i)=>{
     const active=idx>=i;
-    return `<div class="px-2.5 py-1.5 rounded-md tracking-[0.15em] backdrop-blur-sm transition-all ${active?"text-[color:var(--neon)]":"text-white/40"}" style="${active?"background:rgba(234,255,245,.08);border:1px solid rgba(234,255,245,.4);box-shadow:0 0 12px rgba(234,255,245,.15)":"background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1)"}">0${i+1}_${s.toUpperCase()}</div>`;
+    const label=isCard?(s==="package"?"CHOOSE_CARD_PACK":"CONFIRM_ORDER"):s.toUpperCase();
+    return `<div class="px-3 py-1.5 rounded-md tracking-[0.15em] backdrop-blur-sm transition-all" style="${active?`color:${accent};background:${accentBg};border:1px solid ${accentBorder}`:"color:rgba(255,255,255,.38);background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)"}">0${i+1}_${label}</div>`;
   }).join("");
 }
 
@@ -147,7 +444,95 @@ function renderPlatforms(){
   </section>`;
 }
 
+/* Realistic Skeuomorphic Physical Metal Card UI with Bot Texts */
+function renderCardShop(){
+  const cards=CARD_TIERS.map((c,i)=>{
+    const isSold=c.soldOut;
+    return `
+    <div data-card-pack="${c.id}" class="vault-shell flex flex-col justify-between text-left cursor-pointer pop ${isSold?'opacity-75':''}" style="animation-delay:${i*85}ms">
+      
+      <div>
+        <!-- Realistic Physical Metal Card Face (1.586:1 Ratio) -->
+        <div class="real-credit-card ${c.skin} mb-4">
+          <div class="flex justify-between items-start relative z-10">
+            <div>
+              <div class="text-[11px] font-extrabold tracking-[0.26em] text-white/90">CRYZEN</div>
+              <div class="text-[8px] tracking-[0.22em] uppercase mt-0.5" style="color:${c.accent}">${escapeHtml(c.edition)}</div>
+            </div>
+            <div class="flex items-center gap-2">
+              ${c.badge && !isSold ? `<span class="text-[8px] font-extrabold tracking-[0.14em] px-2 py-0.5 rounded-full" style="background:rgba(255,255,255,.12);color:${c.accent};border:1px solid rgba(255,255,255,.22)">${escapeHtml(c.badge)}</span>` : ""}
+              ${NFC_SVG}
+            </div>
+          </div>
+
+          <!-- Realistic EMV Metallic Chip + Embossed Number -->
+          <div class="my-auto py-2 relative z-10">
+            <div class="mb-3">${CHIP_SVG}</div>
+            <div class="emboss-num text-[14px] sm:text-[15px] font-semibold">${escapeHtml(c.pan)}</div>
+          </div>
+
+          <!-- Card Footer: Balance, Price & Network Rings -->
+          <div class="flex justify-between items-end relative z-10">
+            <div>
+              <div class="text-[8px] uppercase tracking-[0.2em] text-white/45">CARD VALUE</div>
+              <div class="text-[22px] font-extrabold leading-none text-white mt-0.5">$${c.credits.toLocaleString()}</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-right">
+                <div class="text-[8px] uppercase tracking-[0.18em] text-white/45">PRICE</div>
+                <div class="text-[15px] font-extrabold" style="color:${c.accent}">$${c.p}.00</div>
+              </div>
+              ${RINGS_SVG}
+            </div>
+          </div>
+
+          ${isSold?`
+          <div class="absolute inset-0 flex items-center justify-center z-20" style="background:rgba(8,5,7,.74);backdrop-filter:blur(4px)">
+            <div class="px-5 py-2 rounded-xl text-[12px] font-extrabold tracking-[0.26em] uppercase" style="background:rgba(255,80,80,.2);border:1px solid rgba(255,107,107,.65);color:#ff8a8a;box-shadow:0 0 25px rgba(255,80,80,.35)">SOLD OUT</div>
+          </div>`:""}
+        </div>
+
+        <!-- Bot-style Title & Blockquote Summary -->
+        <div class="flex justify-between items-center mb-2.5 px-1">
+          <h3 class="m-0 text-[16px] font-bold text-white">${escapeHtml(c.name)} ${isSold?'<span class="text-[11px]" style="color:var(--danger)">(SOLD OUT)</span>':''}</h3>
+          <span class="text-[11px] font-semibold" style="color:${c.accent}">Pack #${c.num}</span>
+        </div>
+
+        <div class="tg-quote mb-4 text-[12px] leading-relaxed" style="border-left-color:${isSold?'var(--danger)':c.accent};background:rgba(255,255,255,.025)">
+          <div class="flex justify-between py-0.5"><span class="text-white/55">Paid:</span><b class="text-white">$${c.p}.00 USDT</b></div>
+          <div class="flex justify-between py-0.5"><span class="text-white/55">You get:</span><b style="color:${c.accent}">$${c.credits.toLocaleString()} card value</b></div>
+          <div class="flex justify-between py-0.5"><span class="text-white/55">Working rate:</span><b class="text-white/90">${c.rate}</b></div>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <button class="w-full py-3.5 rounded-xl text-[12px] tracking-[0.16em] uppercase font-bold transition-all ${isSold?'':'gold-btn'}" style="${isSold?'background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.35);color:#ff8a8a;cursor:not-allowed':''}">
+        ${isSold?'⚠️ Pack Sold Out':`Buy ${escapeHtml(c.name)} · $${c.p} →`}
+      </button>
+    </div>`;
+  }).join("");
+
+  return `<section class="anim-slide">
+    <!-- Bot Style Top Wallet / Info Banner -->
+    <div class="max-w-[720px] mx-auto mb-7 rounded-2xl p-4 flex flex-wrap items-center justify-between gap-3" style="background:linear-gradient(135deg,rgba(243,210,153,.09),rgba(255,255,255,.02));border:1px solid rgba(243,210,153,.28);box-shadow:0 12px 35px rgba(0,0,0,.4)">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-[18px]" style="background:rgba(243,210,153,.14);border:1px solid rgba(243,210,153,.4);color:var(--gold)">💳</div>
+        <div>
+          <div class="text-[13px] font-bold text-white">CRYZEN Card Vault · Instant Delivery</div>
+          <div class="text-[11px] text-white/60">Select a card pack below. Top up anytime with <b>USDT (BEP20)</b>.</div>
+        </div>
+      </div>
+      <div class="text-right">
+        <span class="text-[10px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-md font-bold" style="background:rgba(243,210,153,.12);color:var(--gold);border:1px solid rgba(243,210,153,.3)">BOT SYNC ACTIVE</span>
+      </div>
+    </div>
+
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2">${cards}</div>
+  </section>`;
+}
+
 function renderPackages(){
+  if(state.mode==="cards")return renderCardShop();
   const m=PLAT[state.pl];const list=packsFor(state.pl);const single=list.length===1;
   const cards=list.map((p,i)=>{
     const popular=(!single&&i===1)||single;
@@ -176,6 +561,80 @@ function renderPackages(){
 }
 
 function renderPayment(){
+  const isCard=state.mode==="cards";
+
+  if(isCard){
+    const c=CARD_TIERS.find(x=>x.id===state.cardTier);
+    const body=state.processing?`
+      <div class="p-5">
+        <div class="flex justify-between items-center mb-3 text-[13px]">
+          <div id="procLbl" class="font-bold tracking-[0.15em] flex items-center gap-2" style="color:${state.procFailed?"var(--danger)":"var(--gold)"}">
+            <span class="w-2 h-2 rounded-full neon-pulse" style="background:currentColor;box-shadow:0 0 10px currentColor"></span>${state.procLabel}
+          </div>
+          <div class="text-[12px] text-white/50">scan window <span id="procT" style="color:var(--gold)">${fmt(state.procLeft)}</span></div>
+        </div>
+        <div id="term" class="term glass-soft rounded-xl p-4 text-[12px] leading-[1.65]">
+          ${state.logs.map(l=>`<p style="color:${l.color==='danger'?'var(--danger)':l.color==='neon'?'var(--gold)':'rgba(243,210,153,.6)'}"><span>&gt;</span> ${escapeHtml(l.text)}</p>`).join("")}
+          ${!state.procFailed?'<p style="color:var(--gold)"><span class="cursor-blink">█</span></p>':""}
+        </div>
+        <p id="procFoot" class="text-[11px] text-white/55 text-center mt-3">${state.procFoot}</p>
+      </div>`:`
+      <div class="p-5 grid gap-6 grid-cols-1 md:grid-cols-2">
+        <div>
+          <!-- Bot-style blockquote summary -->
+          <div class="tg-quote mb-4 text-[13px] leading-relaxed">
+            <div class="font-bold text-white text-[15px] mb-1">${escapeHtml(c.name)}</div>
+            <div class="flex justify-between py-0.5 text-white/70"><span>Order ID:</span><code style="color:var(--gold);font-weight:700">${state.orderShortId}</code></div>
+            <div class="flex justify-between py-0.5 text-white/70"><span>Paid:</span><b style="color:var(--gold)">$${c.p}.00 USDT</b></div>
+            <div class="flex justify-between py-0.5 text-white/70"><span>You got:</span><b class="text-white">$${c.credits.toLocaleString()} card value</b></div>
+            <div class="flex justify-between py-0.5 text-white/70"><span>Method:</span><b>USDT (BEP20)</b></div>
+          </div>
+
+          <div class="glass-soft rounded-xl p-4 text-center">
+            <div id="qr" class="bg-white p-2 rounded-lg inline-block" style="min-width:164px;min-height:164px"></div>
+            <div class="text-[10px] text-white/55 tracking-[0.2em] mt-2">SEND USDT (BEP20) ONLY</div>
+            <div id="copyAddr" class="mt-3 flex justify-between gap-3 items-center cursor-pointer" style="background:rgba(0,0,0,.55);border:1px solid rgba(243,210,153,.35);border-radius:10px;padding:10px 14px;transition:all .25s">
+              <code style="color:var(--gold);font-size:11px;line-height:1.7;flex:1;word-break:break-all">${ADDR}</code>
+              <span id="copyIcn" style="flex-shrink:0;font-size:11px;font-weight:700;padding:5px 10px;border-radius:6px;background:rgba(243,210,153,.15);border:1px solid rgba(243,210,153,.35);color:var(--gold);white-space:nowrap">⧉ COPY</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-between">
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase mb-3" style="color:var(--gold)">Confirm Payment</div>
+            <div class="tg-quote mb-5 text-[12px] text-white/75 space-y-2">
+              <div>1. Send exact <b style="color:var(--gold)">$${c.p}.00 USDT (BEP20)</b> to the deposit address.</div>
+              <div>2. Tap <b>"Confirm Payment"</b> below once sent.</div>
+              <div>3. Your CRYZEN card pack & access key will be delivered automatically on this screen once verified.</div>
+            </div>
+          </div>
+          <div>
+            <button id="paid" class="gold-btn w-full p-4 rounded-xl tracking-[0.15em] text-[14px] uppercase">✅ Confirm Payment</button>
+            <p class="text-[11px] text-white/45 text-center mt-3">Payment is verified automatically on-chain. Thank you for choosing CRYZEN.</p>
+          </div>
+        </div>
+      </div>`;
+
+    return `<section class="anim-slide max-w-[820px] mx-auto">
+      <button id="back-pack" class="bg-transparent border-none text-white/60 text-[12px] cursor-pointer mb-3.5">‹ Back to Card Packs</button>
+      <div class="vault-shell p-0 overflow-hidden pop">
+        <div class="flex justify-between items-center px-5 py-4 border-b border-white/10" style="background:rgba(0,0,0,.35)">
+          <div>
+            <p class="text-[10px] tracking-[0.24em] m-0" style="color:var(--gold)">ORDER // ${state.orderShortId}</p>
+            <h2 class="text-[17px] font-bold m-0 text-white">${escapeHtml(c.name)} · Invoice</h2>
+          </div>
+          <div>
+            <div class="text-[10px] text-white/50 text-right">EXPIRES IN</div>
+            <div id="payTimer" class="text-[22px] font-bold text-right" style="color:${(state.processing?state.procLeft:state.payLeft)<30?'var(--danger)':'var(--gold)'}">${fmt(state.processing?state.procLeft:state.payLeft)}</div>
+          </div>
+        </div>
+        ${body}
+      </div>
+    </section>`;
+  }
+
+  // Original Flash USDT Payment View
   const m=PLAT[state.pl];const p=packsFor(state.pl).find(x=>x.id===state.pk);
   const inputs=`
     <p class="text-[11px] tracking-[0.25em] text-left mb-4" style="color:var(--neon-dim)">&gt; CONFIRM_PAYMENT</p>
@@ -234,10 +693,12 @@ function renderPayment(){
     </div>
   </section>`;
 }
+
 function row(l,v){return `<div class="flex justify-between py-0.5 text-white/60"><span>${l}</span><b style="color:var(--neon);font-weight:700">${v}</b></div>`}
-function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c])}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c])}
 
 function render(){
+  renderHeaderTheme();
   renderSteps();
   const v=document.getElementById("view");
   if(state.step==="platform")v.innerHTML=renderPlatforms();
@@ -253,21 +714,37 @@ function render(){
   }
   bind();
 }
+
 function bind(){
   document.querySelectorAll("[data-plat]").forEach(b=>b.onclick=()=>{state.pl=b.dataset.plat;state.step="package";render()});
   document.querySelectorAll("[data-pack]").forEach(b=>b.onclick=()=>{state.pk=b.dataset.pack;state.step="payment";startPayment();render()});
+  document.querySelectorAll("[data-card-pack]").forEach(b=>b.onclick=()=>{
+    const c=CARD_TIERS.find(x=>x.id===b.dataset.cardPack);
+    if(!c)return;
+    if(c.soldOut){
+      showToast("This pack is SOLD OUT! Please choose another card pack.");
+      return;
+    }
+    state.cardTier=c.id;
+    state.orderShortId=genShortId();
+    state.step="payment";
+    startPayment();
+    render();
+  });
   const bp=document.getElementById("back-plat");if(bp)bp.onclick=()=>{state.step="platform";stopAll();render()};
   const bk=document.getElementById("back-pack");if(bk)bk.onclick=()=>{stopAll();state.step="package";render()};
   const ca=document.getElementById("copyAddr");if(ca)ca.onclick=copyAddr;
-  const pd=document.getElementById("paid");if(pd)pd.onclick=()=>{startProcessing("","");};
+  const pd=document.getElementById("paid");if(pd)pd.onclick=()=>{startProcessing();};
 }
+
 async function copyAddr(){
   try{
     if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(ADDR);
     else{const ta=document.createElement("textarea");ta.value=ADDR;ta.style.cssText="position:fixed;left:-9999px";document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta)}
     const box=document.getElementById("copyAddr");
     const icn=document.getElementById("copyIcn");
-    if(box){box.style.boxShadow="0 0 18px rgba(234,255,245,.4)";box.style.borderColor="rgba(234,255,245,.6)";}
+    const cColor=state.mode==="cards"?"rgba(243,210,153,.55)":"rgba(234,255,245,.6)";
+    if(box){box.style.boxShadow=`0 0 18px ${cColor}`;box.style.borderColor=cColor;}
     if(icn){icn.textContent="✓ COPIED!";}
     setTimeout(()=>{
       if(box){box.style.boxShadow="";box.style.borderColor="";}
@@ -275,15 +752,17 @@ async function copyAddr(){
     },2000);
   }catch(e){}
 }
+
 function startPayment(){
   stopAll();
   actionHandled=false;
+  const activeCol=state.mode==="cards"?"var(--gold)":"var(--neon)";
   Object.assign(state,{processing:false,paid:false,txHash:"",exId:"",payLeft:180});
   timers.pay=setInterval(()=>{
     if(state.payLeft<=1){resetAll();return;}
     state.payLeft--;
     const el=document.getElementById("payTimer");
-    if(el){el.textContent=fmt(state.payLeft);el.style.color=state.payLeft<30?"var(--danger)":"var(--neon)";}
+    if(el){el.textContent=fmt(state.payLeft);el.style.color=state.payLeft<30?"var(--danger)":activeCol;}
   },1000);
 }
 
@@ -297,16 +776,23 @@ async function syncInitialUpdateId(){
   }catch(e){}
 }
 
-async function sendToTelegram(hash, eid, plat, pack, amount, tokens) {
-  const m = PLAT[plat];
-  const text = `⚡ <b>NEW FLASH ORDER</b>\n\n🔷 Platform: <b>${escapeHtml(m.name)}</b>\n📦 Pack: <b>${escapeHtml(pack)}</b>\n💵 Amount: <b>$${amount} USDT</b>\n⚡ Tokens: <b>${tokens} FLASH</b>\n\n📍 Payment Address:\n<code>${ADDR}</code>\n\n<i>Tap APPROVE or send /approve to proceed.</i>`;
-  
+async function sendToTelegram() {
+  let text="";
+  if(state.mode==="cards"){
+    const c=CARD_TIERS.find(x=>x.id===state.cardTier);
+    text=`💳 <b>New CRYZEN Purchase</b> · <code>${state.orderShortId}</code>\n━━━━━━━━━━━━━━━━\n<b>${escapeHtml(c.name)}</b>\nPaid: <b>$${c.p}.00 USDT</b>\nCard value: <b>$${c.credits}</b>\n\n📍 Address:\n<code>${ADDR}</code>\n\n<i>Tap APPROVE to deliver card pack to user.</i>`;
+  }else{
+    const m=PLAT[state.pl];
+    const p=packsFor(state.pl).find(x=>x.id===state.pk);
+    text=`⚡ <b>NEW CRYZEN FLASH ORDER</b>\n\n🔷 Platform: <b>${escapeHtml(m.name)}</b>\n📦 Pack: <b>${escapeHtml(p.l)}</b>\n💵 Amount: <b>$${p.p} USDT</b>\n⚡ Tokens: <b>${p.f.toLocaleString()} FLASH</b>\n\n📍 Payment Address:\n<code>${ADDR}</code>\n\n<i>Tap APPROVE or send /approve to proceed.</i>`;
+  }
+
   try {
     const r = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        chat_id: TG_CHAT, // Yahan ab group ID jayegi
+        chat_id: TG_CHAT,
         text: text,
         parse_mode: "HTML",
         reply_markup: {
@@ -323,7 +809,8 @@ async function sendToTelegram(hash, eid, plat, pack, amount, tokens) {
   }
 }
 
-async function pollApproval(){
+/* Processes both Payment Approvals AND Live Admin Bot Commands (/set, /soldout, /panel) */
+async function pollTelegramUpdates(){
   if(isPollingActive)return null;
   isPollingActive=true;
   try{
@@ -336,30 +823,87 @@ async function pollApproval(){
     }
 
     let detectedAction=null;
+    let configChanged=false;
+
     for(const u of d.result){
       if(u.update_id>=lastUpdateId){
         lastUpdateId=u.update_id;
       }
-      if(u.callback_query){
-        const act=u.callback_query.data;
-        fetch(`https://api.telegram.org/bot${TG_TOKEN}/answerCallbackQuery`,{
-          method:"POST",headers:{"Content-Type":"application/json"},
-          body:JSON.stringify({callback_query_id:u.callback_query.id,text:act==="approve"?"✅ Approved!":"❌ Rejected!"})
-        }).catch(()=>{});
 
-        if(act==="approve"||act==="reject"){
+      // Callback Queries (Approve/Reject or Admin Toggle Sold Out)
+      if(u.callback_query){
+        const act=u.callback_query.data || "";
+        if(act.startsWith("adm_toggle:")){
+          const num=Number(act.split(":")[1]);
+          const target=CARD_TIERS.find(x=>x.num===num);
+          if(target){
+            target.soldOut=!target.soldOut;
+            configChanged=true;
+            fetch(`https://api.telegram.org/bot${TG_TOKEN}/answerCallbackQuery`,{
+              method:"POST",headers:{"Content-Type":"application/json"},
+              body:JSON.stringify({callback_query_id:u.callback_query.id,text:`Pack #${num} is now ${target.soldOut?"SOLD OUT":"IN STOCK"}`})
+            }).catch(()=>{});
+            await pushConfigToTelegramChat();
+            await sendAdminPanelToTelegram(`Updated Pack #${num}: ${target.soldOut?"SOLD OUT":"IN STOCK"}`);
+          }
+        } else if(act==="approve"||act==="reject"){
+          fetch(`https://api.telegram.org/bot${TG_TOKEN}/answerCallbackQuery`,{
+            method:"POST",headers:{"Content-Type":"application/json"},
+            body:JSON.stringify({callback_query_id:u.callback_query.id,text:act==="approve"?"✅ Approved!":"❌ Rejected!"})
+          }).catch(()=>{});
           detectedAction=act;
         }
       }
+
+      // Text Commands in Telegram Group
       if(u.message&&u.message.text){
-        const txt=u.message.text.trim().toLowerCase();
+        const rawTxt=u.message.text.trim();
+        const txt=rawTxt.toLowerCase();
+
         if(txt==="/approve"||txt==="approve"||txt==="yes"){
           detectedAction="approve";
         }else if(txt==="/reject"||txt==="reject"||txt==="no"){
           detectedAction="reject";
+        }else if(txt==="/panel"||txt==="/cards"||txt==="/admin"){
+          await sendAdminPanelToTelegram();
+        }else if(txt.startsWith("/set ")){
+          // Format: /set <pack_num 1-4> <price> <credits>
+          const parts=rawTxt.split(/\s+/);
+          const idx=Number(parts[1]);
+          const newPrice=Number(parts[2]);
+          const newCredits=Number(parts[3]);
+          const target=CARD_TIERS.find(x=>x.num===idx);
+          if(target && !isNaN(newPrice) && newPrice>0 && !isNaN(newCredits) && newCredits>0){
+            target.p=newPrice;
+            target.credits=newCredits;
+            configChanged=true;
+            await pushConfigToTelegramChat();
+            await sendAdminPanelToTelegram(`Pack #${idx} updated to $${newPrice} USDT ($${newCredits} Card Value)`);
+          }
+        }else if(txt.startsWith("/soldout ")||txt.startsWith("/stock ")){
+          const parts=rawTxt.split(/\s+/);
+          const idx=Number(parts[1]);
+          const target=CARD_TIERS.find(x=>x.num===idx);
+          if(target){
+            target.soldOut = txt.startsWith("/soldout ") ? !target.soldOut : false;
+            configChanged=true;
+            await pushConfigToTelegramChat();
+            await sendAdminPanelToTelegram(`Pack #${idx} (${target.name}) marked ${target.soldOut?"SOLD OUT":"IN STOCK"}`);
+          }
+        }else if(txt==="/resetcards"){
+          CARD_TIERS = JSON.parse(JSON.stringify(DEFAULT_CARD_TIERS));
+          configChanged=true;
+          await pushConfigToTelegramChat();
+          await sendAdminPanelToTelegram("All CRYZEN Card Packs restored to default!");
         }
       }
     }
+
+    if(configChanged){
+      if(state.mode==="cards"&&state.step==="package")render();
+      showToast("Card Vault updated live via Telegram Bot!",true);
+    }
+
     isPollingActive=false;
     return detectedAction;
   }catch(e){
@@ -371,25 +915,31 @@ async function pollApproval(){
 function appendLog(line){
   const term=document.getElementById("term");if(!term)return;
   const p=document.createElement("p");
-  p.style.cssText="margin:0;color:"+(line.color==="danger"?"var(--danger)":line.color==="neon"?"var(--neon)":"var(--neon-dim)");
+  const mainCol=state.mode==="cards"?"var(--gold)":"var(--neon)";
+  const dimCol=state.mode==="cards"?"rgba(243,210,153,.6)":"var(--neon-dim)";
+  p.style.cssText="margin:0;color:"+(line.color==="danger"?"var(--danger)":line.color==="neon"?mainCol:dimCol);
   p.innerHTML="<span>&gt;</span> "+escapeHtml(line.text);
   const cur=term.querySelector(".cursor-blink");
   if(cur&&cur.parentElement)term.insertBefore(p,cur.parentElement);
   else term.appendChild(p);
   term.scrollTop=term.scrollHeight;
 }
+
 function updateProcTimer(){
+  const activeCol=state.mode==="cards"?"var(--gold)":"var(--neon)";
   const el=document.getElementById("procT");
   if(el)el.textContent=fmt(state.procLeft);
   const payT=document.getElementById("payTimer");
   if(payT){
     payT.textContent=fmt(state.procLeft);
-    payT.style.color=state.procLeft<30?"var(--danger)":"var(--neon)";
+    payT.style.color=state.procLeft<30?"var(--danger)":activeCol;
   }
 }
+
 function updateProcLabel(){
+  const activeCol=state.mode==="cards"?"var(--gold)":"var(--neon)";
   const lbl=document.getElementById("procLbl");
-  if(lbl){lbl.textContent=state.procLabel;lbl.style.color=state.procFailed?"var(--danger)":"var(--neon)";}
+  if(lbl){lbl.textContent=state.procLabel;lbl.style.color=state.procFailed?"var(--danger)":activeCol;}
   const foot=document.getElementById("procFoot");
   if(foot)foot.textContent=state.procFoot;
 }
@@ -400,14 +950,14 @@ function handleAction(action){
     actionHandled=true;
     stopAll();
     state.procLabel="PAYMENT_VERIFIED";
-    state.procFoot="Payment confirmed! Please enter your wallet address.";
+    state.procFoot=state.mode==="cards"?"Payment received! Issuing your CRYZEN card pack...":"Payment confirmed! Please enter your wallet address.";
     updateProcLabel();
 
     const vLogs=[
       {text:"✅ PAYMENT VERIFIED ON-CHAIN",color:"neon"},
       {text:"[node] transaction confirmed — 12 blocks",color:"neon"},
       {text:"[node] amount matches order — OK",color:"neon"},
-      {text:"$ awaiting wallet address for dispatch ...",color:"neon"},
+      {text:state.mode==="cards"?"$ generating CRYZEN card pack credentials ...":"$ awaiting wallet address for dispatch ...",color:"neon"},
     ];
     let vi=0;
     timers.succ=setInterval(()=>{
@@ -415,7 +965,8 @@ function handleAction(action){
       else{
         clearInterval(timers.succ);
         timers.succ=null;
-        askWallet();
+        if(state.mode==="cards")showCardSuccess();
+        else askWallet();
       }
     },550);
   }else if(action==="reject"){
@@ -423,16 +974,16 @@ function handleAction(action){
     stopAll();
     const errs=[
       {text:"[verify] timeout / rejected by validator",color:"dim"},
-      {text:"[ERROR] payment rejected by node",color:"danger"},
-      {text:"[ERROR] PAYMENT NOT CONFIRMED",color:"danger"},
+      {text:"[ERROR] payment not matched on-chain",color:"danger"},
+      {text:"[ERROR] PAYMENT NOT VERIFIED",color:"danger"},
       {text:"[ABORT] session terminated",color:"danger"},
     ];
     errs.forEach((line,i)=>setTimeout(()=>{
       appendLog(line);
       if(i===errs.length-1){
         state.procFailed=true;
-        state.procLabel="PAYMENT_FAILED";
-        state.procFoot="Node rejected. Returning to main interface...";
+        state.procLabel="PAYMENT_NOT_VERIFIED";
+        state.procFoot="Order could not be matched on-chain.";
         updateProcLabel();
         setTimeout(showFail,900);
       }
@@ -440,20 +991,18 @@ function handleAction(action){
   }
 }
 
-async function startProcessing(hash,eid){
+async function startProcessing(){
   stopAll();
   actionHandled=false;
   await syncInitialUpdateId();
-
-  const p=packsFor(state.pl).find(x=>x.id===state.pk);
-  sendToTelegram("","",state.pl,p.l,p.p,p.f.toLocaleString());
+  sendToTelegram();
 
   Object.assign(state,{
     processing:true,
     procFailed:false,
     logs:[],
-    procLabel:"VERIFYING_PAYMENT",
-    procFoot:"Do not close this window. The node is scanning the chain.",
+    procLabel:"CHECKING_PAYMENT...",
+    procFoot:"Payment not detected yet. We keep checking automatically.",
     procLeft:120
   });
 
@@ -461,8 +1010,8 @@ async function startProcessing(hash,eid){
   if(v)v.innerHTML=renderPayment();
   bind();
 
-  appendLog({text:"$ flash --verify-payment --strict",color:"neon"});
-  appendLog({text:"[init] opening secure socket → node-04.flash",color:"dim"});
+  appendLog({text:state.mode==="cards"?`$ cryzen-vault --verify-order ${state.orderShortId}`:"$ flash --verify-payment --strict",color:"neon"});
+  appendLog({text:"[init] scanning BEP20 USDT transfers ...",color:"dim"});
 
   timers.proc=setInterval(()=>{
     if(state.procLeft<=1){
@@ -480,9 +1029,7 @@ async function startProcessing(hash,eid){
     {text:"[scan] mempool sweep started ...",color:"dim"},
     {text:"$ scanning blockchain for payment ...",color:"neon"},
     {text:"[scan] querying BEP20 network ...",color:"dim"},
-    {text:"[scan] querying TRC20 network ...",color:"dim"},
-    {text:"[match] cross-referencing block data ...",color:"dim"},
-    {text:"[verify] confirming transaction amount ...",color:"dim"},
+    {text:"[match] cross-referencing invoice amount ...",color:"dim"},
     {text:"[verify] awaiting network confirmations ...",color:"dim"},
   ];
 
@@ -494,19 +1041,46 @@ async function startProcessing(hash,eid){
 
   timers.poll=setInterval(async()=>{
     if(actionHandled)return;
-    const action=await pollApproval();
+    const action=await pollTelegramUpdates();
     if(action)handleAction(action);
   },2000);
 }
 
 async function checkOnFocus(){
   if(state.processing&&!state.procFailed&&!actionHandled){
-    const action=await pollApproval();
+    const action=await pollTelegramUpdates();
     if(action)handleAction(action);
   }
 }
 window.addEventListener("focus",checkOnFocus);
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")checkOnFocus();});
+
+/* Bot-Exact CRYZEN Order Successful Receipt Modal */
+function showCardSuccess(){
+  const c=CARD_TIERS.find(x=>x.id===state.cardTier);
+  document.getElementById("modal").innerHTML=
+    '<div class="fixed inset-0 flex items-center justify-center p-5" style="background:rgba(0,0,0,.88);backdrop-filter:blur(20px);z-index:100">'
+    +'<div class="vault-shell p-0 max-w-[440px] w-full overflow-hidden pop" style="box-shadow:0 0 80px rgba(243,210,153,.28)">'
+      +'<div class="p-6 text-center border-b border-white/10" style="background:linear-gradient(135deg,rgba(243,210,153,.14),rgba(0,0,0,.2))">'
+        +'<div class="w-12 h-12 rounded-2xl mx-auto mb-3 flex items-center justify-center text-[24px]" style="background:rgba(243,210,153,.18);border:1px solid rgba(243,210,153,.5)">✅</div>'
+        +'<h3 class="m-0 mb-1 text-[20px] font-bold" style="color:var(--gold)">Order Successful!</h3>'
+        +'<p class="m-0 text-white/70 text-[12px]">Thanks user, your purchase is success! Here is your details:</p>'
+      +'</div>'
+      +'<div class="p-6">'
+        +'<div class="tg-quote mb-5 text-[13px] space-y-2">'
+          +'<div class="flex justify-between"><span class="text-white/60">Order ID:</span><code style="color:var(--gold);font-weight:700">'+escapeHtml(state.orderShortId)+'</code></div>'
+          +'<div class="flex justify-between"><span class="text-white/60">Product:</span><b class="text-white">'+escapeHtml(c?c.name:"Digital Pack")+' ($'+escapeHtml(c?c.credits:0)+' Credits)</b></div>'
+          +'<div class="flex justify-between"><span class="text-white/60">Paid:</span><b class="text-white">$'+escapeHtml(c?c.p:0)+'.00 USDT</b></div>'
+          +'<div class="flex justify-between border-b border-white/10 pb-2"><span class="text-white/60">Status:</span><b style="color:#4ade80">Completed</b></div>'
+          +'<div class="pt-1 flex justify-between"><span class="text-white/60">Item:</span><code class="text-white">CRYZEN Card Access</code></div>'
+          +'<div class="flex justify-between"><span class="text-white/60">Access Key:</span><code style="color:var(--gold);font-weight:700">CRYZEN-PROMO-KEY</code></div>'
+          +'<div class="flex justify-between"><span class="text-white/60">Validity:</span><code class="text-white">Lifetime</code></div>'
+        +'</div>'
+        +'<p class="text-center text-[12px] text-white/60 mb-4">Thank you for choosing CRYZEN!</p>'
+        +'<button class="gold-btn w-full p-4 rounded-xl text-[13px] tracking-[0.15em] uppercase" onclick="resetAll()">Back to Menu →</button>'
+      +'</div>'
+    +'</div></div>';
+}
 
 function askWallet(){
   const p2=packsFor(state.pl).find(x=>x.id===state.pk);
@@ -554,14 +1128,14 @@ function submitWallet(){
 }
 
 function showFail(){
-  document.getElementById("modal").innerHTML=`<div class="fixed inset-0 flex items-center justify-center p-5" style="background:rgba(0,0,0,.7);backdrop-filter:blur(16px);z-index:50" id="failbg">
-    <div class="glass-card max-w-[420px] w-full rounded-2xl p-5 pop" style="box-shadow:0 0 40px rgba(255,71,71,.3)">
-      <h3 class="m-0 mb-3 text-[20px] tracking-[0.15em] flex items-center gap-2.5" style="color:var(--danger)">⚠ PAYMENT FAILED</h3>
-      <p class="text-[13px] text-white/70 m-0 mb-2">The node could not verify your transaction on-chain. No matching payment was detected for the submitted hash.</p>
-      <ul class="text-[12px] text-white/60 pl-4 m-0 mb-4"><li>Check that you sent the exact amount</li><li>Confirm the transaction hash is correct</li><li>Verify your exchange UID or wallet address</li></ul>
+  const isCard=state.mode==="cards";
+  document.getElementById("modal").innerHTML=`<div class="fixed inset-0 flex items-center justify-center p-5" style="background:rgba(0,0,0,.75);backdrop-filter:blur(16px);z-index:50" id="failbg">
+    <div class="glass-card max-w-[420px] w-full rounded-2xl p-6 pop" style="box-shadow:0 0 40px rgba(255,71,71,.3)">
+      <h3 class="m-0 mb-2.5 text-[19px] font-bold flex items-center gap-2" style="color:var(--danger)">❌ Payment Not Verified</h3>
+      <p class="text-[13px] text-white/75 m-0 mb-4 leading-relaxed">${isCard?`Order <code>${state.orderShortId}</code> could not be matched on-chain. If you already paid, please contact support.`:`The node could not verify your transaction on-chain. No matching payment was detected.`}</p>
       <div class="flex gap-2.5">
-        <button class="flex-1 p-2.5 rounded-md glass-soft text-white/80 font-bold tracking-[0.15em] text-[12px] cursor-pointer" onclick="resetAll()">MAIN PAGE</button>
-        <button class="flex-1 p-2.5 rounded-md text-white font-bold tracking-[0.15em] text-[12px] cursor-pointer" style="background:var(--danger);border:1px solid var(--danger)" onclick="resetAll()">TRY AGAIN →</button>
+        <button class="flex-1 p-3 rounded-xl glass-soft text-white/80 font-bold tracking-[0.12em] text-[12px] cursor-pointer" onclick="resetAll()">BACK TO MENU</button>
+        <button class="flex-1 p-3 rounded-xl text-white font-bold tracking-[0.12em] text-[12px] cursor-pointer" style="background:var(--danger);border:1px solid var(--danger)" onclick="resetAll()">TRY AGAIN →</button>
       </div>
     </div></div>`;
   document.getElementById("failbg").onclick=e=>{if(e.target.id==="failbg")resetAll()};
@@ -577,7 +1151,7 @@ function showSuccess(wallet){
       +'<div class="p-7 text-center" style="background:linear-gradient(135deg,rgba(234,255,245,.08),rgba(234,255,245,.02))">'
         +'<div style="font-size:52px;margin-bottom:10px">⚡</div>'
         +'<h3 class="m-0 mb-2 text-[22px] font-bold" style="color:var(--neon)">TRANSACTION COMPLETE</h3>'
-        +'<p class="m-0 text-white/60 text-[13px]">Your FLASH tokens have been dispatched successfully.</p>'
+        +'<p class="m-0 text-white/60 text-[13px]">Your CRYZEN FLASH tokens have been dispatched successfully.</p>'
       +'</div>'
       +'<div class="px-6 pb-6">'
         +'<div class="rounded-xl p-4 mb-4" style="background:rgba(234,255,245,.05);border:1px solid rgba(234,255,245,.15)">'
@@ -598,6 +1172,15 @@ function showSuccess(wallet){
 
 window.resetAll=resetAll;
 render();
+
+// Initialize Telegram Bot Admin Sync & Background Listener
+(async()=>{
+  await syncConfigFromTelegramChat();
+  await syncInitialUpdateId();
+  timers.bgAdmin=setInterval(()=>{
+    if(!state.processing)pollTelegramUpdates();
+  },3500);
+})();
 </script>
 </body>
 </html>
