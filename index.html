@@ -192,15 +192,15 @@ const PLAT={
   stake:{name:"stake Flash",tag:"stake_FLASH_ALL",icon:stake_LOGO,desc:"Universal flash — works across every website. Premium tier.",mult:1.5,uid:"BEP20 Address",special:false},
   trust:{name:"all Wallet",tag:"TRUST_WALLET_v2.4",icon:TRUST_LOGO,desc:"Direct flash to Wallet. BEP20 network. No UID required.",mult:1,uid:null,special:true},
 };
-const BASE=[{id:"starter",p:5,f:1000,l:"STARTER"},{id:"pro",p:12,f:3000,l:"PRO"},{id:"elite",p:25,f:13000,l:"ELITE"}];
-const TRUST_PACKS=[{id:"mega",p:1,f:50000,l:"MEGA"}];
+const BASE=[{id:"starter",p:10,f:1000,l:"STARTER"},{id:"pro",p:25,f:3000,l:"PRO"},{id:"elite",p:50,f:13000,l:"ELITE"}];
+const TRUST_PACKS=[{id:"mega",p:10,f:50000,l:"MEGA"}];
 
-// Default CRYZEN Card Packs (None Sold Out Initially, Fully Bot-Editable)
+// Default CRYZEN Card Packs (Minimum $15, alag-alag tiers)
 const DEFAULT_CARD_TIERS=[
-  {id:"t1",num:1,name:"Starter card pack",edition:"CRYZEN CARBON",skin:"skin-carbon",accent:"#cbd5e1",pan:"4532 •••• •••• 1094",p:5,credits:50,rate:"95%",soldOut:false,badge:"STARTER"},
-  {id:"t2",num:2,name:"Basic card pack",edition:"CRYZEN TITANIUM",skin:"skin-titanium",accent:"#93c5fd",pan:"4854 •••• •••• 4421",p:10,credits:120,rate:"97%",soldOut:false,badge:"INSTANT"},
-  {id:"t3",num:3,name:"Pro card pack",edition:"CRYZEN GOLD",skin:"skin-gold",accent:"#f3d299",pan:"5412 •••• •••• 8830",p:25,credits:350,rate:"99%",soldOut:false,badge:"MOST POPULAR"},
-  {id:"t4",num:4,name:"Elite card pack",edition:"CRYZEN OBSIDIAN",skin:"skin-obsidian",accent:"#d8b4fe",pan:"5580 •••• •••• 9901",p:50,credits:900,rate:"99.9%",soldOut:false,badge:"VIP LIMIT"}
+  {id:"t1",num:1,name:"Starter card pack",edition:"CRYZEN CARBON",skin:"skin-carbon",accent:"#cbd5e1",pan:"4532 •••• •••• 1094",p:15,credits:150,rate:"95%",soldOut:false,badge:"STARTER"},
+  {id:"t2",num:2,name:"Basic card pack",edition:"CRYZEN TITANIUM",skin:"skin-titanium",accent:"#93c5fd",pan:"4854 •••• •••• 4421",p:30,credits:350,rate:"97%",soldOut:false,badge:"INSTANT"},
+  {id:"t3",num:3,name:"Pro card pack",edition:"CRYZEN GOLD",skin:"skin-gold",accent:"#f3d299",pan:"5412 •••• •••• 8830",p:55,credits:750,rate:"99%",soldOut:false,badge:"MOST POPULAR"},
+  {id:"t4",num:4,name:"Elite card pack",edition:"CRYZEN OBSIDIAN",skin:"skin-obsidian",accent:"#d8b4fe",pan:"5580 •••• •••• 9901",p:100,credits:1600,rate:"99.9%",soldOut:false,badge:"VIP LIMIT"}
 ];
 
 let CARD_TIERS = JSON.parse(JSON.stringify(DEFAULT_CARD_TIERS));
